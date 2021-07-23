@@ -16,16 +16,20 @@ resources:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 89f0c1b (Single tech/databricks ops (#371))
 =======
 >>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+=======
+>>>>>>> f975b3e (Single tech/databricks ops (#371))
     endpoint: mdwdops-github
     name: devlace/mdw-dataops-clone
 =======
     endpoint: mdwdo-park-github
     name: devlace/mdw-dataops-parkingsensors-02
 >>>>>>> 38da4d8 (Single tech/databricks ops (#371))
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -39,6 +43,8 @@ resources:
 >>>>>>> 89f0c1b (Single tech/databricks ops (#371))
 =======
 >>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+=======
+>>>>>>> f975b3e (Single tech/databricks ops (#371))
     ref: adf_publish
 
 # The deployment script sets this as a Pipeline Variable, but you may choose to set it here in the definition
