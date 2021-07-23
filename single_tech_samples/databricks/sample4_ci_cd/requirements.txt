@@ -1,6 +1,10 @@
 setuptools
 wheel
+<<<<<<< HEAD
 pyspark==3.2.2
+=======
+pyspark==3.0.0
+>>>>>>> 38da4d8 (Single tech/databricks ops (#371))
 pytest
 pytest-cov
 dbx
