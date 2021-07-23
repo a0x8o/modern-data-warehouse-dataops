@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 89f0c1b (Single tech/databricks ops (#371))
 # Azure Databricks CI/CD template <!-- omit in toc -->
 
 ## Contents <!-- omit in toc -->
@@ -8,11 +11,14 @@
 
 ## Contents
 >>>>>>> 38da4d8 (Single tech/databricks ops (#371))
+<<<<<<< HEAD
 =======
 # Azure Databricks CI/CD template <!-- omit in toc -->
 
 ## Contents <!-- omit in toc -->
 >>>>>>> e9848f5 (fix: lint issues in Databricks CICD sample (#450))
+=======
+>>>>>>> 89f0c1b (Single tech/databricks ops (#371))
 
 - [1. Solution Overview](#1-solution-overview)
   - [1.1. Scope](#11-scope)
@@ -22,8 +28,11 @@
   - [2.1. Prerequisites](#21-prerequisites)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> e9848f5 (fix: lint issues in Databricks CICD sample (#450))
+=======
+>>>>>>> 89f0c1b (Single tech/databricks ops (#371))
   - [2.2. Infrastructure as Code (IaC)](#22-infrastructure-as-code-iac)
   - [2.3. Project Structure](#23-project-structure)
   - [2.4. The Notebook Approach](#24-the-notebook-approach)
@@ -59,6 +68,7 @@
     - [2.5.4 Run test with pipelines](#254-Run-test-with-pipelines)
     - [2.5.5 Deployment](#255-Deployment)
 >>>>>>> 38da4d8 (Single tech/databricks ops (#371))
+<<<<<<< HEAD
 =======
     - [2.4.2 DevOps pipeline setup](#242-devops-pipeline-setup)
     - [2.4.3 Import into DEV databricks workspace](#243-import-into-dev-databricks-workspace)
@@ -74,6 +84,8 @@
     - [2.5.4 Run test with pipelines](#254-run-test-with-pipelines)
     - [2.5.5 Deployment](#255-deployment)
 >>>>>>> e9848f5 (fix: lint issues in Databricks CICD sample (#450))
+=======
+>>>>>>> 89f0c1b (Single tech/databricks ops (#371))
 
 ## 1. Solution Overview
 
@@ -447,10 +459,15 @@ In this repo, there are several yaml files, which are the pipelines to support t
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f975b3e (Single tech/databricks ops (#371))
 =======
 >>>>>>> 6cd36ef (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+=======
+=======
+>>>>>>> 89f0c1b (Single tech/databricks ops (#371))
+>>>>>>> 038a4ed (Single tech/databricks ops (#371))
 
 ##### 2.5.3.1 Run tests using devcontainer
 
@@ -481,6 +498,9 @@ pytest spark_python_jobs/tests/unit
 >>>>>>> 38da4d8 (Single tech/databricks ops (#371))
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 038a4ed (Single tech/databricks ops (#371))
 =======
 ##### 2.5.3.2 Run tests in your local environment
 >>>>>>> bf774e5 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
@@ -497,7 +517,12 @@ pytest spark_python_jobs/tests/unit
 ##### 2.5.3.2 Run tests in your local environment
 
 >>>>>>> e9848f5 (fix: lint issues in Databricks CICD sample (#450))
+<<<<<<< HEAD
 >>>>>>> 73c3afc (fix: lint issues in Databricks CICD sample (#450))
+=======
+=======
+>>>>>>> 89f0c1b (Single tech/databricks ops (#371))
+>>>>>>> 038a4ed (Single tech/databricks ops (#371))
 - Setup local Spark with this [document](https://sigdelta.com/blog/how-to-install-pyspark-locally/)
 - Open a cmd terminal window and run the script below to setup the project development.
 
@@ -520,18 +545,26 @@ pytest spark_python_jobs/tests/unit
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f975b3e (Single tech/databricks ops (#371))
 =======
 >>>>>>> 6cd36ef (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
 =======
 >>>>>>> 73c3afc (fix: lint issues in Databricks CICD sample (#450))
+=======
+=======
+>>>>>>> 89f0c1b (Single tech/databricks ops (#371))
+>>>>>>> 038a4ed (Single tech/databricks ops (#371))
   
 =======
 
 >>>>>>> 38da4d8 (Single tech/databricks ops (#371))
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 038a4ed (Single tech/databricks ops (#371))
 =======
 >>>>>>> bf774e5 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
 =======
@@ -544,7 +577,12 @@ pytest spark_python_jobs/tests/unit
 =======
   
 >>>>>>> e9848f5 (fix: lint issues in Databricks CICD sample (#450))
+<<<<<<< HEAD
 >>>>>>> 73c3afc (fix: lint issues in Databricks CICD sample (#450))
+=======
+=======
+>>>>>>> 89f0c1b (Single tech/databricks ops (#371))
+>>>>>>> 038a4ed (Single tech/databricks ops (#371))
 #### 2.5.4 Run test with pipelines
 
 - Commit and push the changes to **develop branch**.
