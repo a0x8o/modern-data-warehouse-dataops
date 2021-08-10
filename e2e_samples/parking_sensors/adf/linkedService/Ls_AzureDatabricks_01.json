@@ -12,7 +12,11 @@
 			"newClusterSparkEnvVars": {
 				"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
 			},
+<<<<<<< HEAD
 			"newClusterVersion": "10.4.x-scala2.12",
+=======
+			"newClusterVersion": "7.3.x-scala2.12",
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 			"newClusterInitScripts": []
 		}
 	},
