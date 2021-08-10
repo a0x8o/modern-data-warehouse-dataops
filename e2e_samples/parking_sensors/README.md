@@ -349,9 +349,16 @@ More resources:
 
     > **IMPORTANT NOTE**: Only the **DEV** Data Factory should be setup with Git integration. Do **not** setup git integration in the STG and PROD Data Factories.
 
+<<<<<<< HEAD
     1. In the Azure Portal, navigate to the Data Factory in the **DEV** environment and launch the Data Factory portal.
     2. On the landing page, select "Set up code repository". For more information, see [here](https://docs.microsoft.com/en-us/azure/data-factory/source-control).
     3. Fill in the repository settings with the following:
+=======
+    1. In the Azure Portal, navigate to the Data Factory in the **DEV** environment.
+    2. Click "Author & Monitor" to launch the Data Factory portal.
+    3. On the landing page, select "Set up code repository". For more information, see [here](https://docs.microsoft.com/en-us/azure/data-factory/source-control).
+    4. Fill in the repository settings with the following:
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
         - Repository type: **Github**
         - Github Account: **your_Github_account**
         - Git repository (select *Use repository link*, if forked): **forked Github repository url**
@@ -438,6 +445,9 @@ After a successful deployment, you should have the following resources:
     - Databricks KeyVault secrets scope created
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
   - **Log Analytics Workspace** - including a kusto query on Query explorer -> Saved queries, to verify results that will be logged on Synapse notebooks (notebooks are not deployed yet).
   - **Azure Synapse SQL Dedicated Pool (formerly SQLDW)** - currently, empty. The Release Pipeline will deploy the SQL Database objects.
   - **Azure Synapse Spark Pool** - currently, empty. Configured to point the deployed Log Analytics workspace, under "Apache Spark Configuration".
@@ -445,12 +455,15 @@ After a successful deployment, you should have the following resources:
 =======
   - **Azure Synapse (formerly SQLDW)** - currently, empty. The Release Pipeline will deploy the SQL Database objects.
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+<<<<<<< HEAD
 =======
   - **Log Analytics Workspace** - including a kusto query on Query explorer -> Saved queries, to verify results that will be looged on Synapse notebooks (notebooks are not deployed yet).
   - **Azure Synapse SQL Dedicated Pool (formerly SQLDW)** - currently, empty. The Release Pipeline will deploy the SQL Database objects.
   - **Azure Synapse Spark Pool** - currently, empty. Configured to point the deployed Log Analytics workspace, under "Apache Spark Configuration".
   - **Azure Synapse Workspace** - currently, empty.
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
   - **Application Insights**
   - **KeyVault** with all relevant secrets stored.
 - In Azure DevOps
@@ -475,24 +488,36 @@ After a successful deployment, you should have the following resources:
       - mdwdops-github
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - **Three additional Service Principals** (one per environment) with Data Factory Contributor role for running Integration Tests
 =======
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 =======
   - **Three additional Service Principals** (one per environment) with Data Factory Contributor role for running Integration Tests
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+  - **Three additional Service Principals** (one per environment) with Data Factory Contributor role for running Integration Tests
+=======
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+>>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 
 Notes:
 
 - *These variable groups are currently not linked to KeyVault due to limitations of creating these programmatically. See [Known Issues, Limitations and Workarounds](#known-issues-limitations-and-workarounds)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Environments and Approval Gates are not deployed as part of this solution. See [Known Issues, Limitations and Workarounds](#known-issues-limitations-and-workarounds)
 =======
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 =======
 - Environments and Approval Gates are not deployed as part of this solution. See [Known Issues, Limitations and Workarounds](#known-issues-limitations-and-workarounds)
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+- Environments and Approval Gates are not deployed as part of this solution. See [Known Issues, Limitations and Workarounds](#known-issues-limitations-and-workarounds)
+=======
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+>>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 
 #### Clean up
 

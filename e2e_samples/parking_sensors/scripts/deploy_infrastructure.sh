@@ -143,6 +143,7 @@ az storage blob upload --container-name $storage_file_system --account-name "$az
 az keyvault secret set --vault-name "$kv_name" --name "datalakeAccountName" --value "$azure_storage_account"
 az keyvault secret set --vault-name "$kv_name" --name "datalakeKey" --value "$azure_storage_key"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 
 # Set Keyvault secrets
@@ -150,7 +151,12 @@ az keyvault secret set --vault-name "$kv_name" --name "datalakeAccountName" --va
 az keyvault secret set --vault-name "$kv_name" --name "datalakeKey" --value "$azure_storage_key"
 =======
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 az keyvault secret set --vault-name "$kv_name" --name "datalakeurl" --value "https://$azure_storage_account.dfs.core.windows.net"
+=======
+
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 
 ###################
 # SQL
@@ -209,6 +215,11 @@ az keyvault secret set --vault-name "$kv_name" --name "applicationInsightsKey" -
 <<<<<<< HEAD
 az keyvault secret set --vault-name "$kv_name" --name "applicationInsightsConnectionString" --value "$appinsights_connstr"
 =======
+<<<<<<< HEAD
+=======
+
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+>>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 
 <<<<<<< HEAD
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
@@ -312,6 +323,11 @@ az keyvault secret set --vault-name "$kv_name" --name "spAdfPass" --value "$sp_a
 az keyvault secret set --vault-name "$kv_name" --name "spAdfTenantId" --value "$sp_adf_tenant"
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+>>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 
 <<<<<<< HEAD
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
