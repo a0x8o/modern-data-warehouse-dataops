@@ -17,12 +17,15 @@ resources:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 89f0c1b (Single tech/databricks ops (#371))
 =======
 >>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 =======
 >>>>>>> f975b3e (Single tech/databricks ops (#371))
+=======
+>>>>>>> 268e970 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
     endpoint: mdwdops-github
     name: devlace/mdw-dataops-clone
 =======
@@ -32,12 +35,16 @@ resources:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+=======
+>>>>>>> 268e970 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 =======
     endpoint: mdwdops-github
     name: devlace/mdw-dataops-clone
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 89f0c1b (Single tech/databricks ops (#371))
@@ -45,6 +52,8 @@ resources:
 >>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 =======
 >>>>>>> f975b3e (Single tech/databricks ops (#371))
+=======
+>>>>>>> 268e970 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
     ref: adf_publish
 
 # The deployment script sets this as a Pipeline Variable, but you may choose to set it here in the definition
