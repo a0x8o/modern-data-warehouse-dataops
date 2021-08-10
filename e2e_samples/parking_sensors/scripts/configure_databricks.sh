@@ -24,7 +24,11 @@ set -o nounset
 # REQUIRED VARIABLES:
 #
 # DATABRICKS_HOST
+<<<<<<< HEAD
 # DATABRICKS_TOKEN - this needs to be a Microsoft Entra ID user token (not PAT token or Microsoft Entra ID application token that belongs to a service principal)
+=======
+# DATABRICKS_TOKEN - this needs to be a Azure AD user token (not PAT token or Azure AD application token that belongs to a service principal)
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 # KEYVAULT_RESOURCE_ID
 # KEYVAULT_DNS_NAME
 

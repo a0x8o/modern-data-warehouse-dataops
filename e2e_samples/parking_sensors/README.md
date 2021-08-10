@@ -28,7 +28,11 @@ The sample demonstrate how DevOps principles can be applied end to end Data Pipe
   - [Prerequisites](#prerequisites)
     - [Software pre-requisites if you use dev container](#software-pre-requisites-if-you-use-dev-container)
   - [Setup and Deployment](#setup-and-deployment)
+<<<<<<< HEAD
   - [Deployed Resources](#deployed-resources)
+=======
+    - [Deployed Resources](#deployed-resources)
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
     - [Clean up](#clean-up)
   - [Data Lake Physical layout](#data-lake-physical-layout)
   - [Known Issues, Limitations and Workarounds](#known-issues-limitations-and-workarounds)
@@ -247,9 +251,18 @@ More resources:
    - Ensure that:
       - You are logged in to the Azure CLI. To login, run
 
+<<<<<<< HEAD
         ```bash
         az login
         ```
+=======
+       Optionally, set the following environment variables:
+       - **AZURE_LOCATION** - Azure location to deploy resources. *Default*: `westus`.
+       - **AZURE_SUBSCRIPTION_ID** - Azure subscription id to use to deploy resources. *Default*: default azure subscription. To see your default, run `az account list`.
+       - **DEPLOYMENT_ID** - string appended to all resource names. This is to ensure uniqueness of azure resource names. *Default*: random five character string.
+       - **AZDO_PIPELINES_BRANCH_NAME** - git branch where Azure DevOps pipelines definitions are retrieved from. *Default*: main.
+       - **AZURESQL_SERVER_PASSWORD** - Password of the SQL Server instance. *Default*: semi-random string.
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 
       - Azure CLI is targeting the Azure Subscription you want to deploy the resources to. To set target Azure Subscription, run
 
@@ -298,6 +311,7 @@ More resources:
       - This will trigger a Build and Release which will fail due to a lacking `adf_publish` branch -- this is expected. This branch will be created once you've setup git integration with your DEV Data Factory and publish a change.
 
 3. **Setup ADF git integration in DEV Data Factory**
+<<<<<<< HEAD
 
    > **IMPORTANT NOTE**: Only the **DEV** Data Factory should be setup with Git integration. Do **not** setup git integration in the STG and PROD Data Factories.
 
@@ -314,6 +328,24 @@ More resources:
       - Import resource into this branch: **main**
    - When prompted to select a working branch, check **Use existing** and select **main**
 
+=======
+
+    > **IMPORTANT NOTE**: Only the **DEV** Data Factory should be setup with Git integration. Do **not** setup git integration in the STG and PROD Data Factories.
+
+    1. In the Azure Portal, navigate to the Data Factory in the **DEV** environment.
+    2. Click "Author & Monitor" to launch the Data Factory portal.
+    3. On the landing page, select "Set up code repository". For more information, see [here](https://docs.microsoft.com/en-us/azure/data-factory/source-control).
+    4. Fill in the repository settings with the following:
+        - Repository type: **Github**
+        - Github Account: **your_Github_account**
+        - Git repository name: **imported Github repository**
+        - Collaboration branch: **main**
+        - Root folder: **/e2e_samples/parking_sensors/adf**
+        - Import Existing Data Factory resource to repository: **Selected**
+        - Branch to import resource into: **Use Collaboration**
+    5. When prompted to select a working branch, select **main**
+
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
    > **Ensure you Import Existing Data Factory resources to repository**. The deployment script deployed ADF objects with Linked Service configurations in line with the newly deployed environments. Importing existing ADF resources definitions to the repository overrides any default Linked Services values so they are correctly in sync with your DEV environment.
 
 4. **Trigger an initial Release**
@@ -359,10 +391,14 @@ After a successful deployment, you should have the following resources:
     - SparkSQL tables created
     - ADLS Gen2 mounted at `dbfs:/mnt/datalake` using the Storage Service Principal.
     - Databricks KeyVault secrets scope created
+<<<<<<< HEAD
   - **Log Analytics Workspace** - including a kusto query on Query explorer -> Saved queries, to verify results that will be logged on Synapse notebooks (notebooks are not deployed yet).
   - **Azure Synapse SQL Dedicated Pool (formerly SQLDW)** - currently, empty. The Release Pipeline will deploy the SQL Database objects.
   - **Azure Synapse Spark Pool** - currently, empty. Configured to point the deployed Log Analytics workspace, under "Apache Spark Configuration".
   - **Azure Synapse Workspace** - currently, empty.
+=======
+  - **Azure Synapse (formerly SQLDW)** - currently, empty. The Release Pipeline will deploy the SQL Database objects.
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
   - **Application Insights**
   - **KeyVault** with all relevant secrets stored.
 - In Azure DevOps
@@ -385,12 +421,18 @@ After a successful deployment, you should have the following resources:
       - mdwdops-serviceconnection-prod
     - **Github Service Connection** for retrieving code from Github
       - mdwdops-github
+<<<<<<< HEAD
   - **Three additional Service Principals** (one per environment) with Data Factory Contributor role for running Integration Tests
+=======
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 
 Notes:
 
 - *These variable groups are currently not linked to KeyVault due to limitations of creating these programmatically. See [Known Issues, Limitations and Workarounds](#known-issues-limitations-and-workarounds)
+<<<<<<< HEAD
 - Environments and Approval Gates are not deployed as part of this solution. See [Known Issues, Limitations and Workarounds](#known-issues-limitations-and-workarounds)
+=======
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 
 #### Clean up
 
