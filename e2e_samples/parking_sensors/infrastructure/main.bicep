@@ -171,9 +171,16 @@ module data_quality_workbook './modules/data_quality_workbook.bicep' = if (enabl
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 268e970 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+=======
+=======
+
+
+>>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+>>>>>>> f2edc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 
 <<<<<<< HEAD
 <<<<<<< HEAD

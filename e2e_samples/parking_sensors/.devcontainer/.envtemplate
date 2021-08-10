@@ -40,6 +40,7 @@ GITHUB_PAT_TOKEN=
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 =======
@@ -48,6 +49,10 @@ GITHUB_PAT_TOKEN=
 >>>>>>> 268e970 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 =======
 >>>>>>> 9276ac8 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+=======
+>>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+>>>>>>> f2edc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 # Password of the SQL Server instance. Default: random string
 =======
 # Password of the SQL Server instance. Default: semi-random string
@@ -56,11 +61,15 @@ GITHUB_PAT_TOKEN=
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f2edc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 =======
 # Password of the SQL Server instance. Default: random string
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 =======
 >>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+<<<<<<< HEAD
 =======
 =======
 # Password of the SQL Server instance. Default: random string
@@ -73,6 +82,8 @@ GITHUB_PAT_TOKEN=
 # Password of the SQL Server instance. Default: random string
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 >>>>>>> 9276ac8 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> f2edc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 # AZURESQL_SERVER_PASSWORD=
 
 
