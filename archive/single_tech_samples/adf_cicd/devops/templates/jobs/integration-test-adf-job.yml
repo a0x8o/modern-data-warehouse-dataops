@@ -56,6 +56,10 @@ jobs:
       pip install -r requirements.txt
     displayName: 'Install dependencies'
 <<<<<<< HEAD:archive/single_tech_samples/adf_cicd/devops/templates/jobs/integration-test-adf-job.yml
+<<<<<<< HEAD:archive/single_tech_samples/adf_cicd/devops/templates/jobs/integration-test-adf-job.yml
+=======
+<<<<<<< HEAD:single_tech_samples/datafactory/sample1_cicd/devops/templates/jobs/integration-test-adf-job.yml
+>>>>>>> 38f6f97 (Single tech/datafactory - Add Automated Integration Testing with pytest adf (#382)):single_tech_samples/datafactory/sample1_cicd/devops/templates/jobs/integration-test-adf-job.yml
     workingDirectory: 'single_tech_samples/datafactory/sample1_cicd/tests/integrationtests/'
 =======
     workingDirectory: 'single_tech_samples/datafactory/tests/integrationtests/'
@@ -65,6 +69,10 @@ jobs:
   - script: |
       pytest tests/test_pipeline_ingest_to_bronze.py -s --doctest-modules --junitxml=test_adf_ingest.xml
 <<<<<<< HEAD:archive/single_tech_samples/adf_cicd/devops/templates/jobs/integration-test-adf-job.yml
+<<<<<<< HEAD:archive/single_tech_samples/adf_cicd/devops/templates/jobs/integration-test-adf-job.yml
+=======
+<<<<<<< HEAD:single_tech_samples/datafactory/sample1_cicd/devops/templates/jobs/integration-test-adf-job.yml
+>>>>>>> 38f6f97 (Single tech/datafactory - Add Automated Integration Testing with pytest adf (#382)):single_tech_samples/datafactory/sample1_cicd/devops/templates/jobs/integration-test-adf-job.yml
     workingDirectory: 'single_tech_samples/datafactory/sample1_cicd/tests/integrationtests/'
 =======
     workingDirectory: 'single_tech_samples/datafactory/tests/integrationtests/'
