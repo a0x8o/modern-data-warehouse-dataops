@@ -55,12 +55,20 @@ jobs:
       python -m pip install --upgrade pip
       pip install -r requirements.txt
     displayName: 'Install dependencies'
+<<<<<<< HEAD:single_tech_samples/datafactory/sample1_cicd/devops/templates/jobs/integration-test-adf-job.yml
     workingDirectory: 'single_tech_samples/datafactory/sample1_cicd/tests/integrationtests/'
+=======
+    workingDirectory: 'single_tech_samples/datafactory/tests/integrationtests/'
+>>>>>>> 5f44ca5 (Single tech/datafactory - Add Automated Integration Testing with pytest adf (#382)):single_tech_samples/datafactory/devops/templates/jobs/integration-test-adf-job.yml
 
   # Run pytest test cases
   - script: |
       pytest tests/test_pipeline_ingest_to_bronze.py -s --doctest-modules --junitxml=test_adf_ingest.xml
+<<<<<<< HEAD:single_tech_samples/datafactory/sample1_cicd/devops/templates/jobs/integration-test-adf-job.yml
     workingDirectory: 'single_tech_samples/datafactory/sample1_cicd/tests/integrationtests/'
+=======
+    workingDirectory: 'single_tech_samples/datafactory/tests/integrationtests/'
+>>>>>>> 5f44ca5 (Single tech/datafactory - Add Automated Integration Testing with pytest adf (#382)):single_tech_samples/datafactory/devops/templates/jobs/integration-test-adf-job.yml
     env:
       AZ_SERVICE_PRINCIPAL_ID: $AZ_SERVICE_PRINCIPAL_ID
       AZ_SERVICE_PRINCIPAL_SECRET: $AZ_SERVICE_PRINCIPAL_SECRET
