@@ -19,7 +19,13 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Cosmos" Version="5.0.7" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3ff2748 (Merge pull request #404 from Azure-Samples/e2e/deployment_stamps)
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.9" />
+=======
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.7" />
+>>>>>>> 0c3e3b7 (Merge pull request #404 from Azure-Samples/e2e/deployment_stamps)
     <PackageReference Include="Microsoft.Identity.Web" Version="1.14.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
 =======
