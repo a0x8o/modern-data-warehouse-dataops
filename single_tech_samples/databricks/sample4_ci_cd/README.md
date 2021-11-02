@@ -421,8 +421,11 @@ In this repo, there are several yaml files, which are the pipelines to support t
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f975b3e (Single tech/databricks ops (#371))
+=======
+>>>>>>> 6cd36ef (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
 
 ##### 2.5.3.1 Run tests using devcontainer
 
@@ -448,11 +451,17 @@ pytest spark_python_jobs/tests/unit
 =======
 >>>>>>> 38da4d8 (Single tech/databricks ops (#371))
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ##### 2.5.3.2 Run tests in your local environment
 >>>>>>> bf774e5 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
 =======
 >>>>>>> f975b3e (Single tech/databricks ops (#371))
+=======
+=======
+##### 2.5.3.2 Run tests in your local environment
+>>>>>>> bf774e5 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+>>>>>>> 6cd36ef (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
 - Setup local Spark with this [document](https://sigdelta.com/blog/how-to-install-pyspark-locally/)
 - Open a cmd terminal window and run the script below to setup the project development.
 
@@ -473,17 +482,25 @@ pytest spark_python_jobs/tests/unit
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f975b3e (Single tech/databricks ops (#371))
+=======
+>>>>>>> 6cd36ef (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
   
 =======
 
 >>>>>>> 38da4d8 (Single tech/databricks ops (#371))
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> bf774e5 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
 =======
 >>>>>>> f975b3e (Single tech/databricks ops (#371))
+=======
+=======
+>>>>>>> bf774e5 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+>>>>>>> 6cd36ef (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
 #### 2.5.4 Run test with pipelines
 
 - Commit and push the changes to **develop branch**.
