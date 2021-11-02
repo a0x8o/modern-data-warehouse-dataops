@@ -458,6 +458,7 @@ In this repo, there are several yaml files, which are the pipelines to support t
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 89f0c1b (Single tech/databricks ops (#371))
 
@@ -467,9 +468,17 @@ In this repo, there are several yaml files, which are the pipelines to support t
 =======
 
 ##### 2.5.3.1 Run tests using devcontainer
+
+>>>>>>> ae756c9 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+=======
+
+##### 2.5.3.1 Run tests using devcontainer
 >>>>>>> bf774e5 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+<<<<<<< HEAD
 =======
 >>>>>>> e9848f5 (fix: lint issues in Databricks CICD sample (#450))
+=======
+>>>>>>> ae756c9 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
 - If needed, install Microsoft VSCode Remote-Containers extension
 - In VSCode, open Command Pallete and type ```Remote-Containers: Open Folder in Container...```
 - Choose the folder named ```***\sample4_ci_cd```
@@ -483,11 +492,15 @@ pytest spark_python_jobs/tests/unit
 ![pytest-output-devcon](images/pytest-output-devcon.png "pytest-output-devcon")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae756c9 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
 
 ##### 2.5.3.2 Run tests in your local environment
 
 =======
 >>>>>>> 38da4d8 (Single tech/databricks ops (#371))
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ##### 2.5.3.2 Run tests in your local environment
@@ -499,6 +512,11 @@ pytest spark_python_jobs/tests/unit
 >>>>>>> e9848f5 (fix: lint issues in Databricks CICD sample (#450))
 =======
 >>>>>>> 89f0c1b (Single tech/databricks ops (#371))
+=======
+=======
+##### 2.5.3.2 Run tests in your local environment
+>>>>>>> bf774e5 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+>>>>>>> ae756c9 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
 - Setup local Spark with this [document](https://sigdelta.com/blog/how-to-install-pyspark-locally/)
 - Open a cmd terminal window and run the script below to setup the project development.
 
@@ -520,12 +538,16 @@ pytest spark_python_jobs/tests/unit
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 89f0c1b (Single tech/databricks ops (#371))
+=======
+>>>>>>> ae756c9 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
   
 =======
 
 >>>>>>> 38da4d8 (Single tech/databricks ops (#371))
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> bf774e5 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
@@ -534,6 +556,10 @@ pytest spark_python_jobs/tests/unit
 >>>>>>> e9848f5 (fix: lint issues in Databricks CICD sample (#450))
 =======
 >>>>>>> 89f0c1b (Single tech/databricks ops (#371))
+=======
+=======
+>>>>>>> bf774e5 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+>>>>>>> ae756c9 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
 #### 2.5.4 Run test with pipelines
 
 - Commit and push the changes to **develop branch**.
