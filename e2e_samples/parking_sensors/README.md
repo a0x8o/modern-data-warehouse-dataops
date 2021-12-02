@@ -279,6 +279,7 @@ More resources:
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 =======
        - **AZURESQL_SERVER_PASSWORD** - Password of the SQL Server instance. *Default*: random string.
+<<<<<<< HEAD
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 
       - Azure CLI is targeting the Azure Subscription you want to deploy the resources to. To set target Azure Subscription, run
@@ -312,6 +313,16 @@ More resources:
    - To further customize the solution, set parameters in `arm.parameters` files located in the `infrastructure` folder.
       - To enable Observability and Monitoring components through code(Observability-as-code), please set enable_monitoring parameter to true in  `arm.parameters` files located in the `infrastructure` folder. This will deploy log analytics workspace to collect monitoring data from key resources, setup an Azure dashboards to monitor key metrics and configure alerts for ADF pipelines.
 
+=======
+<<<<<<< HEAD
+   4. To further customize the solution, set parameters in `arm.parameters` files located in the `infrastructure` folder.
+       - To enable Observability and Monitoring components through code(Observability-as-code), please set enable_monitoring parameter to true in  `arm.parameters` files located in the `infrastructure` folder. This will deploy log analytics workspace to collect monitoring data from key resources, setup an Azure dashboards to monitor key metrics and configure alerts for ADF pipelines.
+=======
+
+      To further customize the solution, set parameters in `arm.parameters` files located in the `infrastructure` folder.
+
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 2. **Deploy Azure resources**
    - `cd` into the `e2e_samples/parking_sensors` folder of the repo.
    - Configure your default AzDo Organization and Project
@@ -350,6 +361,7 @@ More resources:
     > **IMPORTANT NOTE**: Only the **DEV** Data Factory should be setup with Git integration. Do **not** setup git integration in the STG and PROD Data Factories.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     1. In the Azure Portal, navigate to the Data Factory in the **DEV** environment and launch the Data Factory portal.
     2. On the landing page, select "Set up code repository". For more information, see [here](https://docs.microsoft.com/en-us/azure/data-factory/source-control).
     3. Fill in the repository settings with the following:
@@ -359,6 +371,11 @@ More resources:
     3. On the landing page, select "Set up code repository". For more information, see [here](https://docs.microsoft.com/en-us/azure/data-factory/source-control).
     4. Fill in the repository settings with the following:
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+=======
+    1. In the Azure Portal, navigate to the Data Factory in the **DEV** environment and launch the Data Factory portal.
+    2. On the landing page, select "Set up code repository". For more information, see [here](https://docs.microsoft.com/en-us/azure/data-factory/source-control).
+    3. Fill in the repository settings with the following:
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
         - Repository type: **Github**
         - Github Account: **your_Github_account**
         - Git repository (select *Use repository link*, if forked): **forked Github repository url**
@@ -446,8 +463,11 @@ After a successful deployment, you should have the following resources:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
   - **Log Analytics Workspace** - including a kusto query on Query explorer -> Saved queries, to verify results that will be logged on Synapse notebooks (notebooks are not deployed yet).
   - **Azure Synapse SQL Dedicated Pool (formerly SQLDW)** - currently, empty. The Release Pipeline will deploy the SQL Database objects.
   - **Azure Synapse Spark Pool** - currently, empty. Configured to point the deployed Log Analytics workspace, under "Apache Spark Configuration".
@@ -456,14 +476,20 @@ After a successful deployment, you should have the following resources:
   - **Azure Synapse (formerly SQLDW)** - currently, empty. The Release Pipeline will deploy the SQL Database objects.
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 =======
   - **Log Analytics Workspace** - including a kusto query on Query explorer -> Saved queries, to verify results that will be looged on Synapse notebooks (notebooks are not deployed yet).
   - **Azure Synapse SQL Dedicated Pool (formerly SQLDW)** - currently, empty. The Release Pipeline will deploy the SQL Database objects.
   - **Azure Synapse Spark Pool** - currently, empty. Configured to point the deployed Log Analytics workspace, under "Apache Spark Configuration".
   - **Azure Synapse Workspace** - currently, empty.
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+<<<<<<< HEAD
 =======
 >>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
   - **Application Insights**
   - **KeyVault** with all relevant secrets stored.
 - In Azure DevOps
@@ -489,17 +515,23 @@ After a successful deployment, you should have the following resources:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
   - **Three additional Service Principals** (one per environment) with Data Factory Contributor role for running Integration Tests
 =======
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 =======
   - **Three additional Service Principals** (one per environment) with Data Factory Contributor role for running Integration Tests
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+<<<<<<< HEAD
 =======
   - **Three additional Service Principals** (one per environment) with Data Factory Contributor role for running Integration Tests
 =======
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 >>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 
 Notes:
 
@@ -507,17 +539,23 @@ Notes:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 - Environments and Approval Gates are not deployed as part of this solution. See [Known Issues, Limitations and Workarounds](#known-issues-limitations-and-workarounds)
 =======
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 =======
 - Environments and Approval Gates are not deployed as part of this solution. See [Known Issues, Limitations and Workarounds](#known-issues-limitations-and-workarounds)
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+<<<<<<< HEAD
 =======
 - Environments and Approval Gates are not deployed as part of this solution. See [Known Issues, Limitations and Workarounds](#known-issues-limitations-and-workarounds)
 =======
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 >>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 
 #### Clean up
 
