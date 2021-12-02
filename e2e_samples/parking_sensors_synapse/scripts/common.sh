@@ -79,13 +79,18 @@ wait_service_principal_creation () {
     until az ad sp list --show-mine --query "[].appId" -o tsv | grep "$sp_app_id"
     do
         echo "waiting for service principal to finish creating..."
+<<<<<<< HEAD
         sleep 10
+=======
+        sleep 10s
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
     done
     # Now, try to retrieve it
     retry 10 az ad sp show --id "$sp_app_id" --query "objectId"
 }
 
 # Assign an Azure Synapse role to an SP if not already assigned
+<<<<<<< HEAD
 # Sample usage: assign_synapse_role_if_not_exists "<SYNAPSE_WORKSPACE_NAME" "Synapse Administrator" "<SERVICE_PRINCIPAL_OBJECT_ID>"
 assign_synapse_role_if_not_exists() {
     local syn_workspace_name=$1
@@ -100,5 +105,21 @@ assign_synapse_role_if_not_exists() {
             --role "$syn_role_name" --assignee-object-id "$sp_obj_id"
     else
         echo "$syn_role_name role exists for service principal with object id: $sp_obj_id"
+=======
+# Sample usage: assign_synapse_role_if_not_exists "<SYNAPSE_WORKSPACE_NAME" "Synapse Administrator" "<SERVICE_PRINCIPAL_NAME>"
+assign_synapse_role_if_not_exists() {
+    local syn_workspace_name=$1
+    local syn_role_name=$2
+    local sp_name_or_obj_id=$3
+    # Retrieve roleDefinitionId
+    syn_role_id=$(az synapse role definition show --workspace-name "$syn_workspace_name" --role "$syn_role_name" -o json | jq -r '.id')
+    role_exists=$(az synapse role assignment list --workspace-name "$syn_workspace_name" \
+        --query="[?principalId == '$sp_name_or_obj_id' && roleDefinitionId == '$syn_role_id']" -o tsv)
+    if [[ -z $role_exists ]]; then
+        retry 10 az synapse role assignment create --workspace-name "$syn_workspace_name" \
+            --role "$syn_role_name" --assignee "$sp_name_or_obj_id"
+    else
+        echo "$syn_role_name role exists for $sp_name_or_obj_id"
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
     fi
 }

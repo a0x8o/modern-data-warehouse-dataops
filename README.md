@@ -45,6 +45,7 @@ The samples are either focused on a single azure service (**Single Tech Samples*
 
 ## End to End samples
 
+<<<<<<< HEAD
 ### Parking Sensor Solution
 
 This demonstrates batch, end-to-end data pipeline following the MDW architecture, along with a corresponding CI/CD process.
@@ -55,6 +56,18 @@ This has two version of the solution:
 
 - [Azure Data Factory and Azure Databricks Version](e2e_samples/parking_sensors/)
 - [Azure Synapse Version](e2e_samples/parking_sensors_synapse/)
+=======
+- **Parking Sensor Solution** - This demonstrates batch, end-to-end data pipeline following the MDW architecture, along with a corresponding CI/CD process.
+![Architecture](docs/images/CI_CD_process_simplified.png?raw=true "Architecture")
+  This has two version of the solution:
+  - [Azure Data Factory and Azure Databricks Version](e2e_samples/parking_sensors/)
+  - [Azure Synapse Version](e2e_samples/parking_sensors_synapse/)
+- [**Temperature Events Solution**](e2e_samples/temperature_events) - This demonstrate a high-scale event-driven data pipeline with a focus on how to implement Observability and Load Testing.
+![Architecture](e2e_samples/temperature_events/images/temperature-events-architecture.png?raw=true "Architecture")
+- [**Dataset Versioning Solution**](e2e_samples/dataset_versioning) - This demonstrates how to use DataFactory to Orchestrate DataFlow, to do DeltaLoads into DeltaLake On DataLake(DoDDDoD).
+- [**MDW Data Governance and PII data detection**](e2e_samples/mdw_governance) - This sample demonstrates how to deploy the Infrastructure of an end-to-end MDW Pipeline using [Azure DevOps pipelines](https://azure.microsoft.com/en-au/services/devops/pipelines/) along with a focus around Data Governance and PII data detection.
+  - *Technology stack*: Azure DevOps, Azure Data Factory, Azure Databricks, Azure Purview, [Presidio](https://github.com/microsoft/presidio)
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 
 ## Contributing
 

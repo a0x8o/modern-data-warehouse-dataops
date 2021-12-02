@@ -57,6 +57,7 @@ synapse_ws_location=$(az group show \
     --output json |
     jq -r '.location')
 
+<<<<<<< HEAD
 addPackageToSynapseWorkspace(){ 
     declare name=$1
     echo "$(date):Synapse Workspace: Adding Wheel file as a workspace package"
@@ -86,6 +87,92 @@ attachConfigsToSparkPool(){
         --library-requirements './synapse/config/requirements.txt' \
         --package-action Add \
         --package "${name}" 
+=======
+# Function responsible to perform the 4 steps needed to upload a single package to the synapse workspace area
+uploadSynapsePackagesToWorkspace(){
+    declare name=$1
+    echo "Uploading Library Wheel Package to Workspace: $name"
+
+    #az synapse workspace wait --resource-group "${RESOURCE_GROUP_NAME}" --workspace-name "${SYNAPSE_WORKSPACE_NAME}" --created
+    # Step 1: Get bearer token for the Data plane    
+    token=$(az account get-access-token --resource ${synapseResource} --query accessToken --output tsv)    
+    # Step 2: create workspace package placeholder
+    synapseLibraryBaseUri=${SYNAPSE_DEV_ENDPOINT}/libraries
+    synapseLibraryUri="${synapseLibraryBaseUri}/${name}?api-version=${dataPlaneApiVersion}"
+
+    if [[ -n $(az rest --method get --headers "Authorization=Bearer ${token}" 'Content-Type=application/json;charset=utf-8' --url "${synapseLibraryBaseUri}?api-version=${dataPlaneApiVersion}" --query "value[?name == '${name}']" -o tsv) ]]; then
+        echo "Library exists: ${name}"
+        echo "Skipping creation"
+        return 0
+    fi
+
+    az rest --method put --headers "Authorization=Bearer ${token}" "Content-Type=application/json;charset=utf-8" --url "${synapseLibraryUri}"
+    sleep 5s
+
+    # Step 3: upload package content to workspace placeholder
+    #az synapse workspace wait --resource-group "${RESOURCE_GROUP_NAME}" --workspace-name "${SYNAPSE_WORKSPACE_NAME}" --updated
+    synapseLibraryUriForAppend="${SYNAPSE_DEV_ENDPOINT}/libraries/${name}?comp=appendblock&api-version=${dataPlaneApiVersion}"
+    curl -i -X PUT -H "Authorization: Bearer ${token}" -H "Content-Type: application/octet-stream" --data-binary @./synapse/libs/"${name}" "${synapseLibraryUriForAppend}"
+    sleep 15s
+  
+    # Step4: Completing Package creation/Flush the library
+    #az synapse workspace wait --resource-group "${RESOURCE_GROUP_NAME}" --workspace-name "${SYNAPSE_WORKSPACE_NAME}" --updated
+    synapseLibraryUriForFlush="${SYNAPSE_DEV_ENDPOINT}/libraries/${name}/flush?api-version=${dataPlaneApiVersion}"
+    az rest --method post --headers "Authorization=Bearer ${token}" "Content-Type=application/json;charset=utf-8" --url "${synapseLibraryUriForFlush}"
+
+}
+
+# Function responsible to perform the update of a spark pool on 3 configurations: requirements.txt, packages and spark configuration
+uploadSynapseArtifactsToSparkPool(){
+    declare requirementList=$1
+    declare customLibraryList=$2
+    echo "Uploading Synapse Artifacts to Spark Pool: ${BIG_DATAPOOL_NAME}"
+
+    json_body="{
+        \"location\": \"${synapse_ws_location}\",
+        \"properties\": {
+            \"nodeCount\": 10,
+            \"isComputeIsolationEnabled\": false,
+            \"nodeSizeFamily\": \"MemoryOptimized\",
+            \"nodeSize\": \"Small\",
+            \"autoScale\": {
+                \"enabled\": true,
+                \"minNodeCount\": 3,
+                \"maxNodeCount\": 10
+            },
+            \"cacheSize\": 0,
+            \"dynamicExecutorAllocation\": {
+                \"enabled\": false,
+                \"minExecutors\": 0,
+                \"maxExecutors\": 10
+            },
+            \"autoPause\": {
+                \"enabled\": true,
+                \"delayInMinutes\": 15
+            },
+            \"sparkVersion\": \"2.4\",
+            \"libraryRequirements\": {
+                \"filename\": \"requirements.txt\",
+                \"content\": \"${requirementList}\"
+            },
+            \"sessionLevelPackagesEnabled\": true,
+            ${customLibraryList}
+            \"sparkConfigProperties\": {
+                \"configurationType\": \"File\",
+                \"filename\": \"spark_loganalytics_conf.txt\",
+                \"content\": \"spark.synapse.logAnalytics.enabled true\r\nspark.synapse.logAnalytics.workspaceId ${LOG_ANALYTICS_WS_ID}\r\nspark.synapse.logAnalytics.secret ${LOG_ANALYTICS_WS_KEY}\"
+            },
+        }
+    }"
+    
+    #Get bearer token for the management API
+    managementApiUri="${synapseWorkspaceBaseUrl}/bigDataPools/${BIG_DATAPOOL_NAME}?api-version=${apiVersion}"
+    az account get-access-token
+    
+    #Update the Spark Pool with requirements.txt and sparkconfiguration
+    #az synapse spark pool wait --resource-group "${RESOURCE_GROUP_NAME}" --workspace-name "${SYNAPSE_WORKSPACE_NAME}" --big-data-pool-name "${BIG_DATAPOOL_NAME}" --created
+    az rest --method put --headers "Content-Type=application/json" --url "${managementApiUri}" --body "$json_body"
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 }
 
 createLinkedService () {
@@ -128,7 +215,10 @@ getProvisioningState(){
     --name "$BIG_DATAPOOL_NAME" \
     --workspace-name "$SYNAPSE_WORKSPACE_NAME" \
     --resource-group "$RESOURCE_GROUP_NAME" \
+<<<<<<< HEAD
     --only-show-errors \
+=======
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
     --output json |
     jq -r '.provisioningState')
 }
@@ -170,7 +260,11 @@ UploadSql () {
     }
     }"    
     curl -X PUT -H "Content-Type: application/json" -H "Authorization:Bearer $token" --data-raw "$json_body" --url $synapseSqlApiUri
+<<<<<<< HEAD
     sleep 5
+=======
+    sleep 5s
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 }
 
 getProvisioningState
@@ -178,6 +272,7 @@ echo "$provision_state"
 
 while [ "$provision_state" != "Succeeded" ]
 do
+<<<<<<< HEAD
     if [ "$provision_state" == "Failed" ]; then break ; else sleep 10; fi
     getProvisioningState
     echo "$provision_state: checking again in 10 seconds..."
@@ -196,6 +291,37 @@ do
     getProvisioningState
     echo "$provision_state: checking again in 30 seconds..."
 done
+=======
+    if [ "$provision_state" == "Failed" ]; then break ; else sleep 10s; fi
+    getProvisioningState
+    echo "$provision_state"
+done
+
+# Build requirement.txt string to upload in the Spark Configuration
+configurationList=""
+while read -r p; do 
+    #line="${p//'[\r\n]'/''}"
+    line=$(echo $p | sed -e 's/[\r\n]//g')
+    if [ "$configurationList" != "" ]; then configurationList="$configurationList$line\r\n" ; else configurationList="$line\r\n"; fi
+done < $requirementsFileName
+
+# Build packages list to upload in the Spark Pool, upload packages to synapse workspace
+libraryList=""
+for file in "$packagesDirectory"*.whl; do
+    filename=${file##*/}
+    librariesToUpload="{
+        \"name\": \"${filename}\",
+        \"path\": \"${SYNAPSE_WORKSPACE_NAME}/libraries/${filename}\",
+        \"containerName\": \"prep\",
+        \"type\": \"whl\"
+    }"
+    if [ "$libraryList" != "" ]; then libraryList=${libraryList}","${librariesToUpload}; else libraryList=${librariesToUpload};fi
+    uploadSynapsePackagesToWorkspace "${filename}"
+done
+customlibraryList="customLibraries:[$libraryList],"
+uploadSynapseArtifactsToSparkPool "${configurationList}" "${customlibraryList}"
+
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 
 # Deploy all Linked Services
 # Auxiliary string to parametrize the keyvault name on the ls json file
@@ -211,6 +337,7 @@ keyVaultLsContent="{
 }"
 echo "$keyVaultLsContent" > ./synapse/workspace/linkedService/Ls_KeyVault_01.json
 
+<<<<<<< HEAD
 createLinkedService "Ls_KeyVault_01"
 createLinkedService "Ls_AdlsGen2_01"
 createLinkedService "Ls_Http_Parking_Bay_01"
@@ -219,6 +346,24 @@ createLinkedService "Ls_Http_Parking_Bay_01"
 createDataset "Ds_AdlsGen2_MelbParkingData"
 createDataset "Ds_Http_Parking_Bay"
 createDataset "Ds_Http_Parking_Bay_Sensors"
+=======
+getProvisioningState
+echo $provision_state
+while [ "$provision_state" != "Succeeded" ]
+do
+    if [ "$provision_state" == "Failed" ]; then break ; else sleep 10s; fi
+    getProvisioningState
+    echo "$provision_state"
+done
+
+createLinkedService "Ls_KeyVault_01"
+createLinkedService "Ls_AdlsGen2_01"
+createLinkedService "Ls_Rest_MelParkSensors_01"
+
+# Deploy all Datasets
+createDataset "Ds_AdlsGen2_MelbParkingData"
+createDataset "Ds_REST_MelbParkingData"
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 
 # Deploy all Notebooks
 # This line allows the spark pool to be available to attach to the notebooks

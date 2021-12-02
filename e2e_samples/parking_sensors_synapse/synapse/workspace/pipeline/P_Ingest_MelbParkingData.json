@@ -54,10 +54,17 @@
         },
         "inputs": [
           {
+<<<<<<< HEAD
             "referenceName": "Ds_Http_Parking_Bay_Sensors",
             "type": "DatasetReference",
             "parameters": {
               "relativeurl": ""
+=======
+            "referenceName": "Ds_REST_MelbParkingData",
+            "type": "DatasetReference",
+            "parameters": {
+              "relativeurl": "dtpv-d4pf.json"
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
             }
           }
         ],
@@ -112,10 +119,17 @@
         },
         "inputs": [
           {
+<<<<<<< HEAD
             "referenceName": "Ds_Http_Parking_Bay",
             "type": "DatasetReference",
             "parameters": {
               "relativeurl": ""
+=======
+            "referenceName": "Ds_REST_MelbParkingData",
+            "type": "DatasetReference",
+            "parameters": {
+              "relativeurl": "wuf8-susg.json"
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
             }
           }
         ],
@@ -260,7 +274,11 @@
         },
         "userProperties": [],
         "sqlPool": {
+<<<<<<< HEAD
           "referenceName": "",
+=======
+          "referenceName": "syndpprodlace21",
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
           "type": "SqlPoolReference"
         },
         "typeProperties": {

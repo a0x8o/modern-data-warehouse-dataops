@@ -6,7 +6,11 @@ jobs:
     vmImage: 'ubuntu-latest'
   variables:
     pythonWorkingDir: 'e2e_samples/parking_sensors_synapse/tests/integrationtests'
+<<<<<<< HEAD
     pythonVersion: 3.8
+=======
+    pythonVersion: 3.6
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
   steps:
   - script: |
       curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
