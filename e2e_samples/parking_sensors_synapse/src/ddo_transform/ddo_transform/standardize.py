@@ -43,7 +43,10 @@ def get_schema(schema_name):
 def standardize_parking_bay(parkingbay_sdf: DataFrame, load_id, loaded_on):
     t_parkingbay_sdf = (
         parkingbay_sdf
+<<<<<<< HEAD
         .drop_duplicates(["bay_id"])
+=======
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
         .withColumn("last_edit", to_timestamp("last_edit", "yyyyMMddHHmmss"))
         .select(
             col("bay_id").cast("int").alias("bay_id"),
@@ -57,9 +60,12 @@ def standardize_parking_bay(parkingbay_sdf: DataFrame, load_id, loaded_on):
             lit(loaded_on.isoformat()).cast("timestamp").alias("loaded_on")
         )
     ).cache()
+<<<<<<< HEAD
     
     # Note that Bay_Id is not a unique key in the data but the project expects it to be. Dupes are dropped above
 
+=======
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
     # Data Validation
     good_records = t_parkingbay_sdf.filter(col("bay_id").isNotNull())
     bad_records = t_parkingbay_sdf.filter(col("bay_id").isNull())

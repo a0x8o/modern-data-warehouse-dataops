@@ -162,6 +162,10 @@ output synapseDefaultStorageAccountName string = synStorage.name
 output synapseBigdataPoolName string = synapse_spark_sql_pool.name
 output synapse_sql_pool_output object = {
   username: synapseWorkspace.properties.sqlAdministratorLogin
+<<<<<<< HEAD
+=======
+  password: synapse_sqlpool_admin_password
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
   synapse_pool_name: synapse_sql_pool.name
 }
 

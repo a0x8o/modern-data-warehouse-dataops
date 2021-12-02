@@ -81,6 +81,12 @@ resource synapseStorage 'Microsoft.Storage/storageAccounts@2021-04-01' = {
     properties: {
       isVersioningEnabled: false
     }
+<<<<<<< HEAD
+=======
+    dependsOn: [
+      synapseStorage
+    ]
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 
     resource synapseStorageFileSystem2  'containers@2021-04-01' = {
       name: 'synapsedefaultfs'

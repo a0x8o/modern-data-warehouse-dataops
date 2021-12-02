@@ -57,7 +57,11 @@ az group create --name "$resource_group_name" --location "$AZURE_LOCATION" --tag
 
 # By default, set all KeyVault permission to deployer
 # Retrieve KeyVault User Id
+<<<<<<< HEAD
 kv_owner_object_id=$(az ad signed-in-user show --output json | jq -r '.id')
+=======
+kv_owner_object_id=$(az ad signed-in-user show --output json | jq -r '.objectId')
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 
 
 # Validate arm template
@@ -126,9 +130,15 @@ az storage fs directory create -n '/data/dw/dim_location' -f $storage_file_syste
 
 echo "Uploading seed data to data/seed"
 az storage blob upload --container-name $storage_file_system --account-name "$azure_storage_account" --account-key "$azure_storage_key" \
+<<<<<<< HEAD
     --file data/seed/dim_date.csv --name "data/seed/dim_date/dim_date.csv" --overwrite
 az storage blob upload --container-name $storage_file_system --account-name "$azure_storage_account" --account-key "$azure_storage_key" \
     --file data/seed/dim_time.csv --name "data/seed/dim_time/dim_time.csv" --overwrite
+=======
+    --file data/seed/dim_date.csv --name "data/seed/dim_date/dim_date.csv"
+az storage blob upload --container-name $storage_file_system --account-name "$azure_storage_account" --account-key "$azure_storage_key" \
+    --file data/seed/dim_time.csv --name "data/seed/dim_time/dim_time.csv"
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 
 # Set Keyvault secrets
 az keyvault secret set --vault-name "$kv_name" --name "datalakeAccountName" --value "$azure_storage_account"
@@ -216,10 +226,17 @@ AZURE_STORAGE_ACCOUNT=$azure_storage_account \
 
 
 # SERVICE PRINCIPAL IN SYNAPSE INTEGRATION TESTS
+<<<<<<< HEAD
 # Synapse SP for integration tests
  sp_synapse_name="${PROJECT}-syn-${ENV_NAME}-${DEPLOYMENT_ID}-sp"
  sp_synapse_out=$(az ad sp create-for-rbac \
      --role Contributor \
+=======
+# Synapse SP for integration tests 
+ sp_synapse_name="${PROJECT}-syn-${ENV_NAME}-${DEPLOYMENT_ID}-sp"
+ sp_synapse_out=$(az ad sp create-for-rbac \
+     --skip-assignment \
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
      --scopes "/subscriptions/$AZURE_SUBSCRIPTION_ID/resourceGroups/$resource_group_name/providers/Microsoft.Synapse/workspaces/$synapseworkspace_name" \
      --name "$sp_synapse_name" \
      --output json)
@@ -235,9 +252,14 @@ AZURE_STORAGE_ACCOUNT=$azure_storage_account \
 
 # Grant Synapse Administrator to this SP so that it can trigger Synapse pipelines
 wait_service_principal_creation "$sp_synapse_id"
+<<<<<<< HEAD
 sp_synapse_object_id=$(az ad sp show --id "$sp_synapse_id" --query "id" -o tsv)
 assign_synapse_role_if_not_exists "$synapseworkspace_name" "Synapse Administrator" "$sp_synapse_object_id"
 assign_synapse_role_if_not_exists "$synapseworkspace_name" "Synapse SQL Administrator" "$sp_synapse_object_id"
+=======
+assign_synapse_role_if_not_exists "$synapseworkspace_name" "Synapse Administrator" "$sp_synapse_name"
+assign_synapse_role_if_not_exists "$synapseworkspace_name" "Synapse SQL Administrator" "$sp_synapse_name"
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 
 
 ####################

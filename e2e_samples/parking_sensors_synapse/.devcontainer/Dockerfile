@@ -2,7 +2,11 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License. See LICENSE in the project root for license information.
 #-----------------------------------------------------------------------------------------
+<<<<<<< HEAD
 FROM python:3.7
+=======
+FROM python:3.7-stretch
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 
 # Configure apt
 ENV DEBIAN_FRONTEND=noninteractive
@@ -28,7 +32,11 @@ RUN apt-get update \
     && apt-get -y install jq makepasswd
 
 # Install java
+<<<<<<< HEAD
 RUN apt-get install -y openjdk-11-jdk
+=======
+RUN apt-get install -y openjdk-8-jdk
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 ENV JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
 
 RUN mkdir /workspace
