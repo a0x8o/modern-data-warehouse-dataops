@@ -22,6 +22,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3a4acbb (Merge pull request #404 from Azure-Samples/e2e/deployment_stamps)
 =======
@@ -30,16 +31,28 @@
 =======
 >>>>>>> 3ff2748 (Merge pull request #404 from Azure-Samples/e2e/deployment_stamps)
 >>>>>>> d95cba0 (Merge pull request #404 from Azure-Samples/e2e/deployment_stamps)
+=======
+=======
+>>>>>>> 3ff2748 (Merge pull request #404 from Azure-Samples/e2e/deployment_stamps)
+=======
+>>>>>>> 83f5928 (Merge pull request #443 from Azure-Samples/dependabot/nuget/e2e_samples/deployment_stamps/api/WebApi/Microsoft.AspNetCore.Authentication.JwtBearer-5.0.9)
+>>>>>>> 8697df1 (Merge pull request #443 from Azure-Samples/dependabot/nuget/e2e_samples/deployment_stamps/api/WebApi/Microsoft.AspNetCore.Authentication.JwtBearer-5.0.9)
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.9" />
 =======
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.7" />
 >>>>>>> 0c3e3b7 (Merge pull request #404 from Azure-Samples/e2e/deployment_stamps)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.9" />
 >>>>>>> 4e16332 (Merge pull request #443 from Azure-Samples/dependabot/nuget/e2e_samples/deployment_stamps/api/WebApi/Microsoft.AspNetCore.Authentication.JwtBearer-5.0.9)
 =======
 >>>>>>> d95cba0 (Merge pull request #404 from Azure-Samples/e2e/deployment_stamps)
+=======
+=======
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.9" />
+>>>>>>> 4e16332 (Merge pull request #443 from Azure-Samples/dependabot/nuget/e2e_samples/deployment_stamps/api/WebApi/Microsoft.AspNetCore.Authentication.JwtBearer-5.0.9)
+>>>>>>> 8697df1 (Merge pull request #443 from Azure-Samples/dependabot/nuget/e2e_samples/deployment_stamps/api/WebApi/Microsoft.AspNetCore.Authentication.JwtBearer-5.0.9)
     <PackageReference Include="Microsoft.Identity.Web" Version="1.14.0" />
 <<<<<<< HEAD
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
