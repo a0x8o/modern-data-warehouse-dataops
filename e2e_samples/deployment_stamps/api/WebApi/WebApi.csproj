@@ -20,8 +20,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3a4acbb (Merge pull request #404 from Azure-Samples/e2e/deployment_stamps)
+=======
+>>>>>>> 3862d5c (Merge pull request #443 from Azure-Samples/dependabot/nuget/e2e_samples/deployment_stamps/api/WebApi/Microsoft.AspNetCore.Authentication.JwtBearer-5.0.9)
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.9" />
 =======
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.7" />
@@ -36,6 +39,9 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
 =======
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.7" />
+=======
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.9" />
+>>>>>>> 4e16332 (Merge pull request #443 from Azure-Samples/dependabot/nuget/e2e_samples/deployment_stamps/api/WebApi/Microsoft.AspNetCore.Authentication.JwtBearer-5.0.9)
     <PackageReference Include="Microsoft.Identity.Web" Version="1.14.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
 >>>>>>> 0c3e3b7 (Merge pull request #404 from Azure-Samples/e2e/deployment_stamps)
