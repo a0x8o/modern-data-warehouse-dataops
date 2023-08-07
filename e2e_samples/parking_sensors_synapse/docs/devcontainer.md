@@ -5,7 +5,13 @@
 3. Copy the `.envtemplate` to `devcontainer.env` within this folder `e2e_samples/parking_sensors_synapse/.devcontainer`
 and update the values like described [here](../README.md#software-pre-requisites-if-you-use-dev-container)
 4. Open the Command Palette (`Ctrl+Shift+P`) and search for `Remote-Containers: Open Folder in Container...`
+<<<<<<< HEAD
+5. Select `e2e_samples/parking_sensors_synapse` and confirm
+
+Note: when pulling latest changes to the devcontainer, ensure you rebuild your container without cache to any changes to the devcontainer.
+=======
 5. Select `e2e_samples/parking_sensors_synapse/.devcontainer` and confirm
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 
 ![OpenFolderInContainer](images/parking_sensors_dev_container_start.gif)
 

@@ -2,16 +2,17 @@
 page_type: sample
 languages:
 - python
-- C#
-- TypeScript
+- csharp
+- typeScript
 - bicep
 products:
-- Azure
-- Azure-Data-factory
-- Azure-Databricks
-- Azure-Stream-Analytics
-- Azure-Data-Lake-Gen2
-- Azure-Functions
+- azure
+- azure-data-factory
+- azure-databricks
+- azure-stream-analytics
+- azure-data-lake-gen2
+- azure-functions
+- azure-data-share
 description: "Code samples showcasing how to apply DevOps concepts to the Modern Data Warehouse Architecture leveraging different Azure Data Technologies."
 ---
 
@@ -31,15 +32,17 @@ The samples are either focused on a single azure service (**Single Tech Samples*
 - [Azure SQL](single_tech_samples/azuresql/)
   - [CI/CD - AzureSQL](single_tech_samples/azuresql/)
 - [Data Factory](single_tech_samples/datafactory/)
-  - [CI/CD - ADF](single_tech_samples/datafactory/)
+  - [CI/CD - ADF](single_tech_samples/datafactory/sample1_cicd)
 - [Azure Synapse Analytics](single_tech_samples/synapseanalytics)
 - [Azure Databricks](single_tech_samples/databricks/)
   - [IaC - Basic Azure Databricks deployment](single_tech_samples/databricks/sample1_basic_azure_databricks_environment/)
   - [IaC - Enterprise Security and Data Exfiltration Protection Deployment](single_tech_samples/databricks/sample2_enterprise_azure_databricks_environment/)
   - [IaC - Cluster Provisioning and Secure Data Access](single_tech_samples/databricks/sample3_cluster_provisioning_and_data_access/)
+  - [CI/CD - Databricks](single_tech_samples/databricks/sample4_ci_cd/)
 - [Stream Analytics](single_tech_samples/streamanalytics/)
 - [Azure Purview](single_tech_samples/purview/)
   - [IaC - Azure Purview](single_tech_samples/purview/)
+- [Azure Data Share](single_tech_samples/datashare/)
 
 ## End to End samples
 

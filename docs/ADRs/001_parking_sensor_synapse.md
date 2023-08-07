@@ -21,15 +21,27 @@ We are beginning to port the Parking Sensor solution to use Azure Synapse instea
 This builds on the existing work of the Parking Sensor E2E sample and incorporating the Synapse-specific code into the existing code base.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 > NOTE: There is already current work by Yennifer to build this out using this option. See branch [e2e/parking-sensors-synapse](https://github.com/Azure-Samples/modern-data-warehouse-dataops/tree/e2e/parking-sensors-synapse). I've created a branch with a quick spike on how to build on Yennifer's work to demonstrate how deployment of **Option 1** might work -- captured in this [branch](https://github.com/Azure-Samples/modern-data-warehouse-dataops/tree/lace/spike-parking-sensors-synapse/e2e_samples/parking_sensors).
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+> NOTE: There is already current work by Yennifer to build this out using this option. See branch [e2e/parking-sensors-synapse](https://github.com/Azure-Samples/modern-data-warehouse-dataops/tree/e2e/parking-sensors-synapse). I've created a branch with a quick spike on how to build on Yennifer's work to demonstrate how deployment of **Option 1** might work -- captured in this [branch](https://github.com/Azure-Samples/modern-data-warehouse-dataops/tree/lace/spike-parking-sensors-synapse/e2e_samples/parking_sensors).
+=======
+>>>>>>> Azure-Samples-main
 > NOTE: There is already current work by Yennifer to build this out using this option. See branch [e2e/parking-sensors-synapse](../../e2e_samples/parking_sensors_synapse/). I've created a branch with a quick spike on how to build on Yennifer's work to demonstrate how deployment of **Option 1** might work -- captured in this [branch](https://github.com/Azure-Samples/modern-data-warehouse-dataops/tree/lace/spike-parking-sensors-synapse/e2e_samples/parking_sensors).
 =======
 > NOTE: There is already current work by Yennifer to build this out using this option. See branch [e2e/parking-sensors-synapse](https://github.com/Azure-Samples/modern-data-warehouse-dataops/tree/e2e/parking-sensors-synapse). I've created a branch with a quick spike on how to build on Yennifer's work to demonstrate how deployment of **Option 1** might work -- captured in this [branch](https://github.com/Azure-Samples/modern-data-warehouse-dataops/tree/lace/spike-parking-sensors-synapse/e2e_samples/parking_sensors).
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 >>>>>>> Azure-Samples-main
 
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 **End-user experience to deploy sample:**
 
 Run the existing `./deploy.sh` and prompt for choice of `databricks` or `synapse`. Alternatively, have them set a required environment variable (ei. `FLAVOUR`) to determine which sample to deploy. User will then need to follow a set of required manual steps specific to each sample.

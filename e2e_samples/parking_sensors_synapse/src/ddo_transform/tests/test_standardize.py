@@ -36,13 +36,26 @@ def test_standardize_parking_bay(spark):
     parkingbay_sdf = spark.read.json("./data/MelbParkingBayData.json", multiLine=True, schema=schema)
     load_id = 1
     loaded_on = datetime.datetime.now()
+<<<<<<< HEAD
+
     # Act
     t_parkingbay_sdf, t_parkingbay_malformed_sdf = standardize.standardize_parking_bay(parkingbay_sdf, load_id, loaded_on)  # noqa: E501
+
+=======
+    # Act
+    t_parkingbay_sdf, t_parkingbay_malformed_sdf = standardize.standardize_parking_bay(parkingbay_sdf, load_id, loaded_on)  # noqa: E501
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
     # Assert
     assert t_parkingbay_sdf.count() != 0
     assert t_parkingbay_malformed_sdf.count() == 0
     assert t_parkingbay_sdf.filter(isnull("bay_id")).count() == 0
 
+<<<<<<< HEAD
+    # Ensure that each bay_id occurs only once
+    assert t_parkingbay_sdf.groupBy("bay_id").count().filter("count > 1").count() == 0
+
+=======
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 
 def test_standardize_sensordata(spark):
     """Test data transform"""

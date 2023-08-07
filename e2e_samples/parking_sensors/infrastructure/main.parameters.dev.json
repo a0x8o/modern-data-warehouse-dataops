@@ -5,9 +5,12 @@
       "env": {
         "value": "dev"
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Azure-Samples-main
       },      
       "email_id": {
         "value": "support@domain.com"
@@ -18,6 +21,9 @@
 =======
       }
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
 >>>>>>> Azure-Samples-main
     }
   }

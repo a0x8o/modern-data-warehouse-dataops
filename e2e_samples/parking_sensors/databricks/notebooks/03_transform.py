@@ -1,6 +1,6 @@
 # Databricks notebook source
 # MAGIC %pip install great-expectations==0.14.12
-# MAGIC %pip install opencensus-ext-azure==1.1.3
+# MAGIC %pip install opencensus-ext-azure==1.1.7
 
 # COMMAND ----------
 
@@ -11,6 +11,10 @@ loadid = dbutils.widgets.get("loadid")
 from applicationinsights import TelemetryClient
 tc = TelemetryClient(dbutils.secrets.get(scope = "storage_scope", key = "applicationInsightsKey"))
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+>>>>>>> Azure-Samples-main
 =======
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 >>>>>>> Azure-Samples-main

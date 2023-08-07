@@ -118,7 +118,7 @@ az deployment group create -f main.bicep -g rg-${DEVELOPER} --parameters query='
 az iot hub device-identity create --hub-name iot-${DEVELOPER}-${ENVIRONMENT} --device-id iot-${DEVELOPER}-${ENVIRONMENT} --edge-enabled
 
 export DEVICE_CONNECTION_STRING=$(az iot hub device-identity connection-string show --hub-name iot-${DEVELOPER}-${ENVIRONMENT} --device-id iot-${DEVELOPER}-${ENVIRONMENT} --output tsv)
-export AZURE_STORAGE_CONNECTION_STRING=$(az storage account show-connection-string -n ${STORAGE_ACCOUNT} --query connectionString -o tsv)
+export AZURE_STORAGE_CONNECTION_STRING=$(az storage account show-connection-string -g rg-${DEVELOPER} -n ${STORAGE_ACCOUNT} --query connectionString -o tsv)
 
 # Cleanup
 az group delete -n rg-${DEVELOPER}
@@ -166,3 +166,11 @@ This sample combines [Azure IoT device SDK](https://www.npmjs.com/package/azure-
 ![test result output screen capture](docs/images/e2e-test.PNG)
 
 Within the test file [e2e/e2e.ts](e2e/e2e.ts) there is the `EXPECTED_E2E_LATENCY_MS` defined to be 1s. So this would also need to be adjusted for a real implementation.
+
+#### CI/CD
+
+A sample CI/CD Pipeline YAML file is present in this repo under "samplecicdpipeline.yml". This pipeline runs the tests present under the tests folder,
+sets up the IoTHub, and deploys the ASA job using the contents of the streamingjobs.bicep file. In order to add a new ASA job, please do the following:
+
+1. Include a new bicep file for the additional ASA job, and add it to the main.bicep file.
+2. Add the query into the inlineScript under the parameters of the yaml file where the deployment of main.bicep happens.

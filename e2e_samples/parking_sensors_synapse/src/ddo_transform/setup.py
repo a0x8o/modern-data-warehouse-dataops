@@ -35,6 +35,10 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+<<<<<<< HEAD
+        'Programming Language :: Python :: 3.8',
+=======
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
     ],
     description="Python Boilerplate contains all the boilerplate you need to create a Python package.",
     entry_points={

@@ -82,5 +82,9 @@ az devops service-endpoint update \
     --enable-for-all "true"
 
 wait_service_principal_creation "$service_principal_id"
+<<<<<<< HEAD
+service_principal_object_id=$(az ad sp show --id "$service_principal_id" --query "id" -o tsv)
+=======
 service_principal_object_id=$(az ad sp show --id "$service_principal_id" --query "objectId" -o tsv)
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 assign_synapse_role_if_not_exists "$SYNAPSE_WORKSPACE_NAME" "Synapse Administrator" "$service_principal_object_id"

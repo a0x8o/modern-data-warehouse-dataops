@@ -55,7 +55,16 @@ az group create --name "$resource_group_name" --location "$AZURE_LOCATION" --tag
 
 # By default, set all KeyVault permission to deployer
 # Retrieve KeyVault User Id
-kv_owner_object_id=$(az ad signed-in-user show --output json | jq -r '.objectId')
+kv_owner_object_id=$(az ad signed-in-user show --output json | jq -r '.id')
+
+# Validate arm template
+echo "Validating deployment"
+arm_output=$(az deployment group validate \
+    --resource-group "$resource_group_name" \
+    --template-file "./infrastructure/main.bicep" \
+    --parameters @"./infrastructure/main.parameters.${ENV_NAME}.json" \
+    --parameters project="${PROJECT}" keyvault_owner_object_id="${kv_owner_object_id}" deployment_id="${DEPLOYMENT_ID}" sql_server_password="${AZURESQL_SERVER_PASSWORD}" \
+    --output json)
 
 # Validate arm template
 echo "Validating deployment"
@@ -121,6 +130,11 @@ az storage fs directory create -n '/data/dw/dim_location' -f $storage_file_syste
 
 echo "Uploading seed data to data/seed"
 az storage blob upload --container-name $storage_file_system --account-name "$azure_storage_account" --account-key "$azure_storage_key" \
+<<<<<<< HEAD
+    --file data/seed/dim_date.csv --name "data/seed/dim_date/dim_date.csv" --overwrite
+az storage blob upload --container-name $storage_file_system --account-name "$azure_storage_account" --account-key "$azure_storage_key" \
+    --file data/seed/dim_time.csv --name "data/seed/dim_time/dim_time.csv" --overwrite
+=======
     --file data/seed/dim_date.csv --name "data/seed/dim_date/dim_date.csv"
 az storage blob upload --container-name $storage_file_system --account-name "$azure_storage_account" --account-key "$azure_storage_key" \
     --file data/seed/dim_time.csv --name "data/seed/dim_time/dim_time.csv"
@@ -129,17 +143,38 @@ az storage blob upload --container-name $storage_file_system --account-name "$az
 az keyvault secret set --vault-name "$kv_name" --name "datalakeAccountName" --value "$azure_storage_account"
 az keyvault secret set --vault-name "$kv_name" --name "datalakeKey" --value "$azure_storage_key"
 <<<<<<< HEAD
+<<<<<<< HEAD
 az keyvault secret set --vault-name "$kv_name" --name "datalakeurl" --value "https://$azure_storage_account.dfs.core.windows.net"
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 az keyvault secret set --vault-name "$kv_name" --name "datalakeurl" --value "https://$azure_storage_account.dfs.core.windows.net"
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+
+# Set Keyvault secrets
+az keyvault secret set --vault-name "$kv_name" --name "datalakeAccountName" --value "$azure_storage_account"
+az keyvault secret set --vault-name "$kv_name" --name "datalakeKey" --value "$azure_storage_key"
+=======
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+az keyvault secret set --vault-name "$kv_name" --name "datalakeurl" --value "https://$azure_storage_account.dfs.core.windows.net"
+=======
+>>>>>>> Azure-Samples-main
 
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 =======
 az keyvault secret set --vault-name "$kv_name" --name "datalakeurl" --value "https://$azure_storage_account.dfs.core.windows.net"
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
 >>>>>>> Azure-Samples-main
 
 ###################
@@ -150,9 +185,15 @@ echo "Retrieving SQL Server information from the deployment."
 sql_server_name=$(echo "$arm_output" | jq -r '.properties.outputs.synapse_sql_pool_output.value.name')
 sql_server_username=$(echo "$arm_output" | jq -r '.properties.outputs.synapse_sql_pool_output.value.username')
 <<<<<<< HEAD
+<<<<<<< HEAD
 sql_server_password=$(echo "$arm_output" | jq -r '.properties.outputs.synapse_sql_pool_output.value.password')
 =======
 <<<<<<< HEAD
+=======
+sql_server_password=$(echo "$arm_output" | jq -r '.properties.outputs.synapse_sql_pool_output.value.password')
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+>>>>>>> Azure-Samples-main
+=======
 =======
 sql_server_password=$(echo "$arm_output" | jq -r '.properties.outputs.synapse_sql_pool_output.value.password')
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
@@ -165,26 +206,38 @@ sql_dw_connstr_nocred=$(az sql db show-connection-string --client ado.net \
     jq -r .)
 sql_dw_connstr_uname=${sql_dw_connstr_nocred/<username>/$sql_server_username}
 <<<<<<< HEAD
+<<<<<<< HEAD
 sql_dw_connstr_uname_pass=${sql_dw_connstr_uname/<password>/$sql_server_password}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Azure-Samples-main
 sql_dw_connstr_uname_pass=${sql_dw_connstr_uname/<password>/$AZURESQL_SERVER_PASSWORD}
 =======
 sql_dw_connstr_uname_pass=${sql_dw_connstr_uname/<password>/$sql_server_password}
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
 >>>>>>> Azure-Samples-main
 
 # Store in Keyvault
 az keyvault secret set --vault-name "$kv_name" --name "sqlsrvrName" --value "$sql_server_name"
 az keyvault secret set --vault-name "$kv_name" --name "sqlsrvUsername" --value "$sql_server_username"
 <<<<<<< HEAD
+<<<<<<< HEAD
 az keyvault secret set --vault-name "$kv_name" --name "sqlsrvrPassword" --value "$sql_server_password"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Azure-Samples-main
 az keyvault secret set --vault-name "$kv_name" --name "sqlsrvrPassword" --value "$AZURESQL_SERVER_PASSWORD"
 =======
 az keyvault secret set --vault-name "$kv_name" --name "sqlsrvrPassword" --value "$sql_server_password"
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
 >>>>>>> Azure-Samples-main
 az keyvault secret set --vault-name "$kv_name" --name "sqldwDatabaseName" --value "$sql_dw_database_name"
 az keyvault secret set --vault-name "$kv_name" --name "sqldwConnectionString" --value "$sql_dw_connstr_uname_pass"
@@ -209,6 +262,7 @@ appinsights_connstr=$(az monitor app-insights component show \
 # Store in Keyvault
 az keyvault secret set --vault-name "$kv_name" --name "applicationInsightsKey" --value "$appinsights_key"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 az keyvault secret set --vault-name "$kv_name" --name "applicationInsightsConnectionString" --value "$appinsights_connstr"
@@ -219,6 +273,24 @@ az keyvault secret set --vault-name "$kv_name" --name "applicationInsightsConnec
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 
 =======
+=======
+az keyvault secret set --vault-name "$kv_name" --name "applicationInsightsConnectionString" --value "$appinsights_connstr"
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+>>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> Azure-Samples-main
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 # ###########################
 # # RETRIEVE DATABRICKS INFORMATION AND CONFIGURE WORKSPACE
@@ -284,8 +356,14 @@ adfLsDir=$adfTempDir/linkedService
 jq --arg kvurl "$kv_dns_name" '.properties.typeProperties.baseUrl = $kvurl' $adfLsDir/Ls_KeyVault_01.json > "$tmpfile" && mv "$tmpfile" $adfLsDir/Ls_KeyVault_01.json
 jq --arg databricksWorkspaceUrl "$databricks_host" '.properties.typeProperties.domain = $databricksWorkspaceUrl' $adfLsDir/Ls_AzureDatabricks_01.json > "$tmpfile" && mv "$tmpfile" $adfLsDir/Ls_AzureDatabricks_01.json
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+jq --arg databricksWorkspaceResourceId "$databricks_workspace_resource_id" '.properties.typeProperties.workspaceResourceId = $databricksWorkspaceResourceId' $adfLsDir/Ls_AzureDatabricks_01.json > "$tmpfile" && mv "$tmpfile" $adfLsDir/Ls_AzureDatabricks_01.json
+=======
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+>>>>>>> Azure-Samples-main
+=======
 jq --arg databricksWorkspaceResourceId "$databricks_workspace_resource_id" '.properties.typeProperties.workspaceResourceId = $databricksWorkspaceResourceId' $adfLsDir/Ls_AzureDatabricks_01.json > "$tmpfile" && mv "$tmpfile" $adfLsDir/Ls_AzureDatabricks_01.json
 =======
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
@@ -325,9 +403,21 @@ az keyvault secret set --vault-name "$kv_name" --name "spAdfTenantId" --value "$
 
 <<<<<<< HEAD
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+<<<<<<< HEAD
 >>>>>>> Azure-Samples-main
 
 =======
+=======
+>>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> Azure-Samples-main
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 ####################
 # AZDO Azure Service Connection and Variables Groups
@@ -352,13 +442,19 @@ DATABRICKS_WORKSPACE_RESOURCE_ID=$databricks_workspace_resource_id \
 SQL_SERVER_NAME=$sql_server_name \
 SQL_SERVER_USERNAME=$sql_server_username \
 <<<<<<< HEAD
+<<<<<<< HEAD
 SQL_SERVER_PASSWORD=$sql_server_password \
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Azure-Samples-main
 SQL_SERVER_PASSWORD=$AZURESQL_SERVER_PASSWORD \
 =======
 SQL_SERVER_PASSWORD=$sql_server_password \
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
 >>>>>>> Azure-Samples-main
 SQL_DW_DATABASE_NAME=$sql_dw_database_name \
 AZURE_STORAGE_KEY=$azure_storage_key \
@@ -383,13 +479,19 @@ AZURE_LOCATION=${AZURE_LOCATION}
 SQL_SERVER_NAME=${sql_server_name}
 SQL_SERVER_USERNAME=${sql_server_username}
 <<<<<<< HEAD
+<<<<<<< HEAD
 SQL_SERVER_PASSWORD=${sql_server_password}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Azure-Samples-main
 SQL_SERVER_PASSWORD=${AZURESQL_SERVER_PASSWORD}
 =======
 SQL_SERVER_PASSWORD=${sql_server_password}
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
 >>>>>>> Azure-Samples-main
 SQL_DW_DATABASE_NAME=${sql_dw_database_name}
 AZURE_STORAGE_ACCOUNT=${azure_storage_account}

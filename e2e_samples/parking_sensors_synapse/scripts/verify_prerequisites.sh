@@ -4,13 +4,19 @@
 command -v jq >/dev/null 2>&1 || { echo >&2 "I require jq but it's not installed. See https://stedolan.github.io/jq/.  Aborting."; exit 1; }
 command -v az >/dev/null 2>&1 || { echo >&2 "I require azure cli but it's not installed. See https://bit.ly/2Gc8IsS. Aborting."; exit 1; }
 <<<<<<< HEAD
+<<<<<<< HEAD
 command -v makepasswd >/dev/null 2>&1 || { echo >&2 "I require makepasswd. See https://bit.ly/3GneVxD. Aborting."; exit 1; }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Azure-Samples-main
 # command -v makepasswd >/dev/null 2>&1 || { echo >&2 "I require makepasswd. See https://bit.ly/3GneVxD. Aborting."; exit 1; }
 =======
 command -v makepasswd >/dev/null 2>&1 || { echo >&2 "I require makepasswd. See https://bit.ly/3GneVxD. Aborting."; exit 1; }
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
 >>>>>>> Azure-Samples-main
 
 # Check if user is logged in

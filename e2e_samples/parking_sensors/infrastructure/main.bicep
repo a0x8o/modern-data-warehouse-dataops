@@ -1,8 +1,14 @@
 param project string = 'mdwdo'
 param env string = 'dev'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+param email_id string = 'support@domain.com'
+=======
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+>>>>>>> Azure-Samples-main
+=======
 param email_id string = 'support@domain.com'
 =======
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
@@ -13,8 +19,14 @@ param keyvault_owner_object_id string
 @secure()
 param sql_server_password string
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+param enable_monitoring bool
+=======
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+>>>>>>> Azure-Samples-main
+=======
 param enable_monitoring bool
 =======
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
@@ -81,8 +93,14 @@ module keyvault './modules/keyvault.bicep' = {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+
+=======
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+>>>>>>> Azure-Samples-main
+=======
 
 =======
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
@@ -98,8 +116,11 @@ module appinsights './modules/appinsights.bicep' = {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Azure-Samples-main
 module loganalytics './modules/log_analytics.bicep' = if (enable_monitoring) {
   name: 'log_analytics_deploy_${deployment_id}'
   params: {
@@ -145,7 +166,6 @@ module actiongroup './modules/actiongroup.bicep' = if (enable_monitoring) {
   params: {
     project: project
     env: env
-    location: location
     deployment_id: deployment_id
     email_id: email_id
   }
@@ -172,6 +192,7 @@ module data_quality_workbook './modules/data_quality_workbook.bicep' = if (enabl
   name: 'wb_${deployment_id}'
   params: {
     appinsights_name: appinsights.outputs.appinsights_name
+    location: location
   }
   dependsOn: [
     loganalytics
@@ -180,8 +201,19 @@ module data_quality_workbook './modules/data_quality_workbook.bicep' = if (enabl
 }
 =======
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+>>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 >>>>>>> Azure-Samples-main
 
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 output storage_account_name string = storage.outputs.storage_account_name
 output synapse_sql_pool_output object = synapse_sql_pool.outputs.synapse_sql_pool_output
 output databricks_output object = databricks.outputs.databricks_output
@@ -191,8 +223,14 @@ output keyvault_name string = keyvault.outputs.keyvault_name
 output keyvault_resource_id string = keyvault.outputs.keyvault_resource_id
 output datafactory_name string = datafactory.outputs.datafactory_name
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+output loganalytics_name string = loganalytics.outputs.loganalyticswsname
+=======
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+>>>>>>> Azure-Samples-main
+=======
 output loganalytics_name string = loganalytics.outputs.loganalyticswsname
 =======
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))

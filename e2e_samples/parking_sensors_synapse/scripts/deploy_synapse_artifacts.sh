@@ -57,6 +57,37 @@ synapse_ws_location=$(az group show \
     --output json |
     jq -r '.location')
 
+<<<<<<< HEAD
+addPackageToSynapseWorkspace(){ 
+    declare name=$1
+    echo "$(date):Synapse Workspace: Adding Wheel file as a workspace package"
+    az synapse workspace-package upload --workspace-name "${SYNAPSE_WORKSPACE_NAME}" \
+        --package ./synapse/libs/"${name}"
+}
+
+attachConfigsToSparkPool(){
+    declare name=$1
+    echo "$(date):Synapse SparkPool Update: Attaching Spark Config File to SparkPool"
+
+    echo "$(date):Synapse SparkPool Update: Cleaning previous versions ./synapse/config/spark_config.txt"
+    > ./synapse/config/spark_config.txt
+    echo "" >> ./synapse/config/spark_config.txt
+    
+    echo "$(date):Synapse SparkPool Update: Creating current version ./synapse/config/spark_config.txt"
+    echo "cleaning previous versions ./synapse/config/spark_config.txt"
+    echo "spark.synapse.logAnalytics.enabled true" >> ./synapse/config/spark_config.txt
+    echo "spark.synapse.logAnalytics.workspaceId ${LOG_ANALYTICS_WS_ID}" >> ./synapse/config/spark_config.txt
+    echo "spark.synapse.logAnalytics.secret ${LOG_ANALYTICS_WS_KEY}" >> ./synapse/config/spark_config.txt
+    echo "" >> ./synapse/config/spark_config.txt
+    
+    az synapse spark pool update --name "${BIG_DATAPOOL_NAME}" \
+        --workspace-name "${SYNAPSE_WORKSPACE_NAME}" \
+        --resource-group "${RESOURCE_GROUP_NAME}" \
+        --spark-config-file-path './synapse/config/spark_config.txt' \
+        --library-requirements './synapse/config/requirements.txt' \
+        --package-action Add \
+        --package "${name}" 
+=======
 # Function responsible to perform the 4 steps needed to upload a single package to the synapse workspace area
 uploadSynapsePackagesToWorkspace(){
     declare name=$1
@@ -84,6 +115,10 @@ uploadSynapsePackagesToWorkspace(){
 =======
     sleep 5s
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 >>>>>>> Azure-Samples-main
 
     # Step 3: upload package content to workspace placeholder
@@ -98,6 +133,10 @@ uploadSynapsePackagesToWorkspace(){
 =======
     sleep 15s
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 >>>>>>> Azure-Samples-main
   
     # Step4: Completing Package creation/Flush the library
@@ -157,6 +196,7 @@ uploadSynapseArtifactsToSparkPool(){
     #Update the Spark Pool with requirements.txt and sparkconfiguration
     #az synapse spark pool wait --resource-group "${RESOURCE_GROUP_NAME}" --workspace-name "${SYNAPSE_WORKSPACE_NAME}" --big-data-pool-name "${BIG_DATAPOOL_NAME}" --created
     az rest --method put --headers "Content-Type=application/json" --url "${managementApiUri}" --body "$json_body"
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 }
 
 createLinkedService () {
@@ -200,8 +240,14 @@ getProvisioningState(){
     --workspace-name "$SYNAPSE_WORKSPACE_NAME" \
     --resource-group "$RESOURCE_GROUP_NAME" \
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+    --only-show-errors \
+=======
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> Azure-Samples-main
+=======
     --only-show-errors \
 =======
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
@@ -248,13 +294,19 @@ UploadSql () {
     }"    
     curl -X PUT -H "Content-Type: application/json" -H "Authorization:Bearer $token" --data-raw "$json_body" --url $synapseSqlApiUri
 <<<<<<< HEAD
+<<<<<<< HEAD
     sleep 5s
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Azure-Samples-main
     sleep 5
 =======
     sleep 5s
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
 >>>>>>> Azure-Samples-main
 }
 
@@ -264,11 +316,14 @@ echo "$provision_state"
 while [ "$provision_state" != "Succeeded" ]
 do
 <<<<<<< HEAD
+<<<<<<< HEAD
     if [ "$provision_state" == "Failed" ]; then break ; else sleep 10s; fi
     getProvisioningState
     echo "$provision_state"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Azure-Samples-main
     if [ "$provision_state" == "Failed" ]; then break ; else sleep 10; fi
     getProvisioningState
     echo "$provision_state: checking again in 10 seconds..."
@@ -277,6 +332,28 @@ do
     getProvisioningState
     echo "$provision_state"
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
+done
+
+
+# Add Wheel package to Synapse workspace
+addPackageToSynapseWorkspace "ddo_transform-localdev-py2.py3-none-any.whl"
+attachConfigsToSparkPool "ddo_transform-localdev-py2.py3-none-any.whl"
+
+getProvisioningState
+echo "$provision_state"
+while [ "$provision_state" != "Succeeded" ]
+do
+    if [ "$provision_state" == "Failed" ]; then break ; else sleep 30; fi
+    getProvisioningState
+    echo "$provision_state: checking again in 30 seconds..."
+done
+=======
+    if [ "$provision_state" == "Failed" ]; then break ; else sleep 10s; fi
+    getProvisioningState
+    echo "$provision_state"
 >>>>>>> Azure-Samples-main
 done
 
@@ -293,6 +370,10 @@ while read -r p; do
     #line="${p//'[\r\n]'/''}"
     line=$(echo $p | sed -e 's/[\r\n]//g')
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 >>>>>>> Azure-Samples-main
     if [ "$configurationList" != "" ]; then configurationList="$configurationList$line\r\n" ; else configurationList="$line\r\n"; fi
 done < $requirementsFileName
@@ -325,6 +406,11 @@ do
     echo "$provision_state: checking again in 30 seconds..."
 done
 =======
+<<<<<<< HEAD
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> Azure-Samples-main
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 >>>>>>> Azure-Samples-main
 
@@ -343,8 +429,23 @@ keyVaultLsContent="{
 echo "$keyVaultLsContent" > ./synapse/workspace/linkedService/Ls_KeyVault_01.json
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Azure-Samples-main
+=======
+<<<<<<< HEAD
+createLinkedService "Ls_KeyVault_01"
+createLinkedService "Ls_AdlsGen2_01"
+createLinkedService "Ls_Http_Parking_Bay_01"
+
+# Deploy all Datasets
+createDataset "Ds_AdlsGen2_MelbParkingData"
+createDataset "Ds_Http_Parking_Bay"
+createDataset "Ds_Http_Parking_Bay_Sensors"
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 =======
 >>>>>>> Azure-Samples-main
 getProvisioningState
@@ -359,6 +460,10 @@ done
 <<<<<<< HEAD
 =======
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 >>>>>>> Azure-Samples-main
 createLinkedService "Ls_KeyVault_01"
 createLinkedService "Ls_AdlsGen2_01"
@@ -367,6 +472,7 @@ createLinkedService "Ls_Rest_MelParkSensors_01"
 # Deploy all Datasets
 createDataset "Ds_AdlsGen2_MelbParkingData"
 createDataset "Ds_REST_MelbParkingData"
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 
 # Deploy all Notebooks
 # This line allows the spark pool to be available to attach to the notebooks

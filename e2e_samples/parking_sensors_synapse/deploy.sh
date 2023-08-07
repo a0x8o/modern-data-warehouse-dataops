@@ -54,9 +54,12 @@ GITHUB_REPO_URL=$github_repo_url \
 
 # This replaces 'your_github_handle/your_repo' to deployer's github project
 <<<<<<< HEAD
+<<<<<<< HEAD
 sed -i "s+your_github_handle/your_repo+$GITHUB_REPO+" devops/azure-pipelines-cd-release.yml
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Azure-Samples-main
 # Adding "uname" check so that the command works on Mac.
 if [[ $(uname) == "Darwin" ]]; then
     sed -i '' "s+your_github_handle/your_repo+$GITHUB_REPO+" devops/azure-pipelines-cd-release.yml
@@ -66,6 +69,9 @@ fi
 =======
 sed -i "s+your_github_handle/your_repo+$GITHUB_REPO+" devops/azure-pipelines-cd-release.yml
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
 >>>>>>> Azure-Samples-main
 
 # azure-pipelines-cd-release.yml pipeline require DEV_SYNAPSE_WORKSPACE_NAME set, this line retrieves this value from .env.dev file and sets it in DEV_SYNAPSE_WORKSPACE_NAME
