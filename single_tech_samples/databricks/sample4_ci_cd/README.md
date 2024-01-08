@@ -153,8 +153,8 @@ The below diagram illustrates the deployment process flow followed in this templ
 
 The following technologies are used to build this template:
 
-- [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/)
-- [Azure Databricks](https://azure.microsoft.com/en-au/free/databricks/)
+- [Azure DevOps](https://azure.microsoft.com/en-us/products/devops/)
+- [Azure Databricks](https://azure.microsoft.com/en-us/free/databricks/)
 - [Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview)
 - [nutter](https://github.com/microsoft/nutter)
 - [databricks cli](https://docs.microsoft.com/en-us/azure/databricks/dev-tools/cli/)
@@ -171,7 +171,7 @@ The following are the prerequisites for deploying this template :
 1. [Github account](https://github.com/)
 2. [Azure DevOps account](https://dev.azure.com)
 3. [Azure account](https://portal.azure.com)
-4. [Azure Databricks Workspace](https://azure.microsoft.com/en-us/services/databricks/)
+4. [Azure Databricks Workspace](https://azure.microsoft.com/en-us/products/databricks/)
 
 ### 2.2. Infrastructure as Code (IaC)
 
