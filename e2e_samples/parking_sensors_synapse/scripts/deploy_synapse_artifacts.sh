@@ -108,6 +108,13 @@ uploadSynapsePackagesToWorkspace(){
 
     az rest --method put --headers "Authorization=Bearer ${token}" "Content-Type=application/json;charset=utf-8" --url "${synapseLibraryUri}"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8eb5c18 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> Azure-Samples-main
     sleep 5s
 =======
 <<<<<<< HEAD
@@ -116,9 +123,19 @@ uploadSynapsePackagesToWorkspace(){
     sleep 5s
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Azure-Samples-main
 =======
 >>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> Azure-Samples-main
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+<<<<<<< HEAD
+=======
+    sleep 5s
+>>>>>>> 9276ac8 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> 8eb5c18 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 >>>>>>> Azure-Samples-main
 
     # Step 3: upload package content to workspace placeholder
@@ -126,6 +143,13 @@ uploadSynapsePackagesToWorkspace(){
     synapseLibraryUriForAppend="${SYNAPSE_DEV_ENDPOINT}/libraries/${name}?comp=appendblock&api-version=${dataPlaneApiVersion}"
     curl -i -X PUT -H "Authorization: Bearer ${token}" -H "Content-Type: application/octet-stream" --data-binary @./synapse/libs/"${name}" "${synapseLibraryUriForAppend}"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8eb5c18 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> Azure-Samples-main
     sleep 15s
 =======
 <<<<<<< HEAD
@@ -134,9 +158,19 @@ uploadSynapsePackagesToWorkspace(){
     sleep 15s
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Azure-Samples-main
 =======
 >>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> Azure-Samples-main
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+<<<<<<< HEAD
+=======
+    sleep 15s
+>>>>>>> 9276ac8 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> 8eb5c18 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 >>>>>>> Azure-Samples-main
   
     # Step4: Completing Package creation/Flush the library
@@ -241,8 +275,14 @@ getProvisioningState(){
     --resource-group "$RESOURCE_GROUP_NAME" \
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+    --only-show-errors \
+=======
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> Azure-Samples-main
+=======
     --only-show-errors \
 =======
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
@@ -295,9 +335,12 @@ UploadSql () {
     curl -X PUT -H "Content-Type: application/json" -H "Authorization:Bearer $token" --data-raw "$json_body" --url $synapseSqlApiUri
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     sleep 5s
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Azure-Samples-main
 =======
 >>>>>>> Azure-Samples-main
     sleep 5
@@ -305,6 +348,9 @@ UploadSql () {
     sleep 5s
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
 >>>>>>> Azure-Samples-main
 =======
 >>>>>>> Azure-Samples-main
@@ -317,11 +363,14 @@ while [ "$provision_state" != "Succeeded" ]
 do
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     if [ "$provision_state" == "Failed" ]; then break ; else sleep 10s; fi
     getProvisioningState
     echo "$provision_state"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Azure-Samples-main
 =======
 >>>>>>> Azure-Samples-main
     if [ "$provision_state" == "Failed" ]; then break ; else sleep 10; fi
@@ -333,8 +382,11 @@ do
     echo "$provision_state"
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Azure-Samples-main
 =======
+=======
+>>>>>>> Azure-Samples-main
 done
 
 
@@ -354,6 +406,9 @@ done
     if [ "$provision_state" == "Failed" ]; then break ; else sleep 10s; fi
     getProvisioningState
     echo "$provision_state"
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
 >>>>>>> Azure-Samples-main
 done
 
@@ -361,6 +416,13 @@ done
 configurationList=""
 while read -r p; do 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8eb5c18 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> Azure-Samples-main
     #line="${p//'[\r\n]'/''}"
     line=$(echo $p | sed -e 's/[\r\n]//g')
 =======
@@ -371,9 +433,20 @@ while read -r p; do
     line=$(echo $p | sed -e 's/[\r\n]//g')
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Azure-Samples-main
 =======
 >>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> Azure-Samples-main
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+<<<<<<< HEAD
+=======
+    #line="${p//'[\r\n]'/''}"
+    line=$(echo $p | sed -e 's/[\r\n]//g')
+>>>>>>> 9276ac8 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> 8eb5c18 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 >>>>>>> Azure-Samples-main
     if [ "$configurationList" != "" ]; then configurationList="$configurationList$line\r\n" ; else configurationList="$line\r\n"; fi
 done < $requirementsFileName
@@ -395,6 +468,13 @@ customlibraryList="customLibraries:[$libraryList],"
 uploadSynapseArtifactsToSparkPool "${configurationList}" "${customlibraryList}"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8eb5c18 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> Azure-Samples-main
 =======
 <<<<<<< HEAD
 getProvisioningState
@@ -407,10 +487,20 @@ do
 done
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 >>>>>>> Azure-Samples-main
 =======
 >>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> Azure-Samples-main
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+<<<<<<< HEAD
+=======
+>>>>>>> 9276ac8 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> 8eb5c18 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 >>>>>>> Azure-Samples-main
 
@@ -430,12 +520,21 @@ echo "$keyVaultLsContent" > ./synapse/workspace/linkedService/Ls_KeyVault_01.jso
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> Azure-Samples-main
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9276ac8 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> 8eb5c18 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> Azure-Samples-main
 createLinkedService "Ls_KeyVault_01"
 createLinkedService "Ls_AdlsGen2_01"
 createLinkedService "Ls_Http_Parking_Bay_01"
@@ -445,8 +544,21 @@ createDataset "Ds_AdlsGen2_MelbParkingData"
 createDataset "Ds_Http_Parking_Bay"
 createDataset "Ds_Http_Parking_Bay_Sensors"
 =======
+<<<<<<< HEAD
 >>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 =======
+>>>>>>> Azure-Samples-main
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+=======
+>>>>>>> 9276ac8 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> 8eb5c18 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 >>>>>>> Azure-Samples-main
 getProvisioningState
 echo $provision_state
@@ -458,12 +570,27 @@ do
 done
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 <<<<<<< HEAD
 >>>>>>> Azure-Samples-main
 =======
 >>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> Azure-Samples-main
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> 9276ac8 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+=======
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> 8eb5c18 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 >>>>>>> Azure-Samples-main
 createLinkedService "Ls_KeyVault_01"
 createLinkedService "Ls_AdlsGen2_01"

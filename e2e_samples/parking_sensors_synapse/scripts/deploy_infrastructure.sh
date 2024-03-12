@@ -254,6 +254,7 @@ AZURE_STORAGE_ACCOUNT=$azure_storage_account \
 wait_service_principal_creation "$sp_synapse_id"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 sp_synapse_object_id=$(az ad sp show --id "$sp_synapse_id" --query "objectId" -o tsv)
 assign_synapse_role_if_not_exists "$synapseworkspace_name" "Synapse Administrator" "$sp_synapse_object_id"
 assign_synapse_role_if_not_exists "$synapseworkspace_name" "Synapse SQL Administrator" "$sp_synapse_object_id"
@@ -264,6 +265,22 @@ assign_synapse_role_if_not_exists "$synapseworkspace_name" "Synapse SQL Administ
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9276ac8 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> 3862d5c (Merge pull request #443 from Azure-Samples/dependabot/nuget/e2e_samples/deployment_stamps/api/WebApi/Microsoft.AspNetCore.Authentication.JwtBearer-5.0.9)
+=======
+>>>>>>> 8eb5c18 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> 8697df1 (Merge pull request #443 from Azure-Samples/dependabot/nuget/e2e_samples/deployment_stamps/api/WebApi/Microsoft.AspNetCore.Authentication.JwtBearer-5.0.9)
+>>>>>>> Azure-Samples-main
 sp_synapse_object_id=$(az ad sp show --id "$sp_synapse_id" --query "id" -o tsv)
 assign_synapse_role_if_not_exists "$synapseworkspace_name" "Synapse Administrator" "$sp_synapse_object_id"
 assign_synapse_role_if_not_exists "$synapseworkspace_name" "Synapse SQL Administrator" "$sp_synapse_object_id"
@@ -271,14 +288,35 @@ assign_synapse_role_if_not_exists "$synapseworkspace_name" "Synapse SQL Administ
 assign_synapse_role_if_not_exists "$synapseworkspace_name" "Synapse Administrator" "$sp_synapse_name"
 assign_synapse_role_if_not_exists "$synapseworkspace_name" "Synapse SQL Administrator" "$sp_synapse_name"
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3862d5c (Merge pull request #443 from Azure-Samples/dependabot/nuget/e2e_samples/deployment_stamps/api/WebApi/Microsoft.AspNetCore.Authentication.JwtBearer-5.0.9)
+>>>>>>> Azure-Samples-main
 =======
 sp_synapse_object_id=$(az ad sp show --id "$sp_synapse_id" --query "objectId" -o tsv)
 assign_synapse_role_if_not_exists "$synapseworkspace_name" "Synapse Administrator" "$sp_synapse_object_id"
 assign_synapse_role_if_not_exists "$synapseworkspace_name" "Synapse SQL Administrator" "$sp_synapse_object_id"
 >>>>>>> 4e16332 (Merge pull request #443 from Azure-Samples/dependabot/nuget/e2e_samples/deployment_stamps/api/WebApi/Microsoft.AspNetCore.Authentication.JwtBearer-5.0.9)
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 83f5928 (Merge pull request #443 from Azure-Samples/dependabot/nuget/e2e_samples/deployment_stamps/api/WebApi/Microsoft.AspNetCore.Authentication.JwtBearer-5.0.9)
+>>>>>>> Azure-Samples-main
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 83f5928 (Merge pull request #443 from Azure-Samples/dependabot/nuget/e2e_samples/deployment_stamps/api/WebApi/Microsoft.AspNetCore.Authentication.JwtBearer-5.0.9)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8eb5c18 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> 8697df1 (Merge pull request #443 from Azure-Samples/dependabot/nuget/e2e_samples/deployment_stamps/api/WebApi/Microsoft.AspNetCore.Authentication.JwtBearer-5.0.9)
 >>>>>>> Azure-Samples-main
 sp_synapse_object_id=$(az ad sp show --id "$sp_synapse_id" --query "objectId" -o tsv)
 assign_synapse_role_if_not_exists "$synapseworkspace_name" "Synapse Administrator" "$sp_synapse_object_id"
@@ -288,8 +326,17 @@ assign_synapse_role_if_not_exists "$synapseworkspace_name" "Synapse Administrato
 assign_synapse_role_if_not_exists "$synapseworkspace_name" "Synapse SQL Administrator" "$sp_synapse_name"
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> Azure-Samples-main
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8697df1 (Merge pull request #443 from Azure-Samples/dependabot/nuget/e2e_samples/deployment_stamps/api/WebApi/Microsoft.AspNetCore.Authentication.JwtBearer-5.0.9)
 >>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 =======
 >>>>>>> Azure-Samples-main
@@ -299,9 +346,23 @@ assign_synapse_role_if_not_exists "$synapseworkspace_name" "Synapse Administrato
 assign_synapse_role_if_not_exists "$synapseworkspace_name" "Synapse SQL Administrator" "$sp_synapse_object_id"
 >>>>>>> 4e16332 (Merge pull request #443 from Azure-Samples/dependabot/nuget/e2e_samples/deployment_stamps/api/WebApi/Microsoft.AspNetCore.Authentication.JwtBearer-5.0.9)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Azure-Samples-main
 =======
 >>>>>>> 83f5928 (Merge pull request #443 from Azure-Samples/dependabot/nuget/e2e_samples/deployment_stamps/api/WebApi/Microsoft.AspNetCore.Authentication.JwtBearer-5.0.9)
+>>>>>>> Azure-Samples-main
+=======
+>>>>>>> 83f5928 (Merge pull request #443 from Azure-Samples/dependabot/nuget/e2e_samples/deployment_stamps/api/WebApi/Microsoft.AspNetCore.Authentication.JwtBearer-5.0.9)
+<<<<<<< HEAD
+=======
+>>>>>>> 9276ac8 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> 3862d5c (Merge pull request #443 from Azure-Samples/dependabot/nuget/e2e_samples/deployment_stamps/api/WebApi/Microsoft.AspNetCore.Authentication.JwtBearer-5.0.9)
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> 8eb5c18 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> 8697df1 (Merge pull request #443 from Azure-Samples/dependabot/nuget/e2e_samples/deployment_stamps/api/WebApi/Microsoft.AspNetCore.Authentication.JwtBearer-5.0.9)
 >>>>>>> Azure-Samples-main
 
 

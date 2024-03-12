@@ -1,10 +1,20 @@
 setuptools
 wheel
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+pyspark==3.0.0
+=======
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
 pyspark==3.2.2
 =======
 pyspark==3.0.0
 >>>>>>> 38da4d8 (Single tech/databricks ops (#371))
+<<<<<<< HEAD
+=======
+>>>>>>> f975b3e (Single tech/databricks ops (#371))
+>>>>>>> Azure-Samples-main
 pytest
 pytest-cov
 dbx

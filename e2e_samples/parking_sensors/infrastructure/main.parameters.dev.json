@@ -6,9 +6,12 @@
         "value": "dev"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Azure-Samples-main
 =======
 >>>>>>> Azure-Samples-main
       },      
@@ -22,6 +25,9 @@
       }
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
 >>>>>>> Azure-Samples-main
 =======
 >>>>>>> Azure-Samples-main

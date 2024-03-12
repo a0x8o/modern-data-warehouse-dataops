@@ -1,16 +1,51 @@
 # Azure Data Factory
 
+[Azure Data Factory](https://learn.microsoft.com/en-us/azure/data-factory/) is Azure's cloud ETL service for scale-out serverless data integration and data transformation. It offers a code-free UI for intuitive authoring and single-pane-of-glass monitoring and management.
+
 ## Samples
 
-1. [CICD and automated integration tests for Azure Data Factory](sample1_cicd/README.md) - this demonstrates how to do continuous integration and continuous delivery with Azure Data Factory, along with automated integration tests.
+<<<<<<< HEAD
+- [ADF - Automated CI/CD using automatic publish](./adf_cicd_auto_publish/README.md) - This sample demonstrates how to do continuous integration and continuous Deployment with Azure Data Factory using Automated Publish feature. It eliminates the `manual publish` step from ADF and automatically generates the ARM Templates using ADF Utilities that can be used for deployment.
+- [ADF - Data pre-processing using Azure Batch](./adf_data_pre_processing_with_azure_batch/README.md) - This sample demonstrates how to run azure batch container workloads from azure data factory.
+=======
+- [Solution Overview](#solution-overview)
+  - [Architecture](#architecture)
+  - [Continuous Integration and Continuous Delivery](#continuous-integration-and-continuous-delivery)
+  - [Technologies used](#technologies-used)
+- [Key Learnings](#key-learnings)
+  - [1. Add data pipelines to source control](#1-add-data-pipelines-to-source-control)
+  - [2. Publish data pipelines in an automated fashion with CI/CD pipelines](#2-publish-data-pipelines-in-an-automated-fashion-with-cicd-pipelines)
+  - [3. Store secrets used by the pipelines in Key Vault](#3-store-secrets-used-by-the-pipelines-in-key-vault)
+- [Key Concepts](#key-concepts)
+  - [Working with ADF and git](#working-with-adf-and-git)
+  - [Data Lake Organization](#data-lake-organization)
+  - [Build and Release Pipeline](#build-and-release-pipeline)
+  - [Environments](#environments)
+    - [Build and Release Sequence](#build-and-release-sequence)
+    - [Resources](#resources)
+- [How to use the sample](#how-to-use-the-sample)
+  - [Prerequisites](#prerequisites)
+    - [Software pre-requisites](#software-pre-requisites)
+  - [Setup and Deployment](#setup-and-deployment)
+    - [Deployed Resources](#deployed-resources)
+  - [Known Issues, Limitations and Workarounds](#known-issues-limitations-and-workarounds)
 
-2. [Automated CI/CD For Azure Data Factory using Automatic Publish](./sample2_cicd_auto_publish/README.md) - This sample demonstrates how to do continuous integration and continuous Deployment with Azure Data Factory using Automated Publish feature. This code sample eliminates the Manual Publish step from ADF and automatically generates the ARM Templates using ADF Utilities that can be used for deployment.
+## Solution Overview
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
 3. [Running container workloads from Azure Data Factory on Azure Batch for data pre-processing](sample3_data_pre_processing_with_azure_batch/README.md) - this sample demonstrates how to run azure batch container workloads from azure data factory.
 =======
 ## Solution Overview
 
+<<<<<<< HEAD
+=======
+>>>>>>> 38f6f97 (Single tech/datafactory - Add Automated Integration Testing with pytest adf (#382))
+>>>>>>> Azure-Samples-main
 This solution sets up an [Azure Data Lake Gen2](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) storage account, with a folder structure that enables data tiering (bronze, silver, gold), and an [Azure Data Factory](https://azure.microsoft.com/en-au/services/data-factory/)(ADF) instance with linked services connecting to the data lake, to a separate file share and a [key vault](https://azure.microsoft.com/en-us/services/key-vault/) for secrets.
 
 The Azure Data Factory contains a simple pipeline taking data from the file share and ingesting it to the bronze folder.

@@ -2,8 +2,14 @@ param project string = 'mdwdo'
 param env string = 'dev'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+param email_id string = 'support@domain.com'
+=======
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+>>>>>>> Azure-Samples-main
+=======
 param email_id string = 'support@domain.com'
 =======
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
@@ -20,8 +26,14 @@ param keyvault_owner_object_id string
 param sql_server_password string
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+param enable_monitoring bool
+=======
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+>>>>>>> Azure-Samples-main
+=======
 param enable_monitoring bool
 =======
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
@@ -94,8 +106,14 @@ module keyvault './modules/keyvault.bicep' = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+
+=======
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+>>>>>>> Azure-Samples-main
+=======
 
 =======
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
@@ -117,8 +135,11 @@ module appinsights './modules/appinsights.bicep' = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Azure-Samples-main
 =======
 >>>>>>> Azure-Samples-main
 module loganalytics './modules/log_analytics.bicep' = if (enable_monitoring) {
@@ -202,18 +223,47 @@ module data_quality_workbook './modules/data_quality_workbook.bicep' = if (enabl
 =======
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Azure-Samples-main
 =======
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 268e970 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+=======
+=======
+>>>>>>> Azure-Samples-main
 
 <<<<<<< HEAD
 
 >>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+<<<<<<< HEAD
 >>>>>>> Azure-Samples-main
 
 =======
 >>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> f2edc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> 9276ac8 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> 8eb5c18 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> Azure-Samples-main
 output storage_account_name string = storage.outputs.storage_account_name
 output synapse_sql_pool_output object = synapse_sql_pool.outputs.synapse_sql_pool_output
 output databricks_output object = databricks.outputs.databricks_output
@@ -224,8 +274,14 @@ output keyvault_resource_id string = keyvault.outputs.keyvault_resource_id
 output datafactory_name string = datafactory.outputs.datafactory_name
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+output loganalytics_name string = loganalytics.outputs.loganalyticswsname
+=======
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+>>>>>>> Azure-Samples-main
+=======
 output loganalytics_name string = loganalytics.outputs.loganalyticswsname
 =======
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))

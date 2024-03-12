@@ -1,6 +1,10 @@
 # DataOps - Parking Sensor (Synapse) <!-- omit in toc -->
 
+<<<<<<< HEAD
 The sample demonstrate how DevOps principles can be applied to an end to end Data Pipeline Solution built according to the [Modern Data Warehouse (MDW)](https://learn.microsoft.com/en-au/azure/architecture/solution-ideas/articles/enterprise-data-warehouse) pattern, implemented in Azure Synapse.
+=======
+The sample demonstrate how DevOps principles can be applied to an end to end Data Pipeline Solution built according to the [Modern Data Warehouse (MDW)](https://azure.microsoft.com/en-au/solutions/architecture/modern-data-warehouse/) pattern, implemented in Azure Synapse.
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 
 ## Contents <!-- omit in toc -->
 
@@ -59,10 +63,17 @@ See [here](#build-and-release-pipeline) for details.
 
 It makes use of the following azure services:
 
+<<<<<<< HEAD
 - [Azure Synapse Analytics](https://azure.microsoft.com/en-us/products/synapse-analytics/)
 - [Azure Data Lake Gen2](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction)
 - [Azure DevOps](https://azure.microsoft.com/en-us/products/devops/)
 - [PowerBI](https://www.microsoft.com/en-us/power-platform/products/power-bi/)
+=======
+- [Azure Synapse Analytics](https://azure.microsoft.com/en-au/services/synapse-analytics/)
+- [Azure Data Lake Gen2](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction)
+- [Azure DevOps](https://azure.microsoft.com/en-au/services/devops/)
+- [PowerBI](https://powerbi.microsoft.com/en-us/)
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 - [Application Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview)
 - [Log Analytics](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-overview)
 
@@ -166,9 +177,15 @@ Please check the details [here](docs/observability.md).
 ### Prerequisites
 
 1. [Github account](https://github.com/)
+<<<<<<< HEAD
 2. [Azure Account](https://azure.microsoft.com/en-us/free/)
    - *Permissions needed*: ability to create and deploy to an azure [resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview), a [service principal](https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals), and grant the [collaborator role](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview) to the service principal over the resource group.
 3. [Azure DevOps Project](https://azure.microsoft.com/en-us/products/devops/)
+=======
+2. [Azure Account](https://azure.microsoft.com/en-au/free/search/?&ef_id=Cj0KCQiAr8bwBRD4ARIsAHa4YyLdFKh7JC0jhbxhwPeNa8tmnhXciOHcYsgPfNB7DEFFGpNLTjdTPbwaAh8bEALw_wcB:G:s&OCID=AID2000051_SEM_O2ShDlJP&MarinID=O2ShDlJP_332092752199_azure%20account_e_c__63148277493_aud-390212648371:kwd-295861291340&lnkd=Google_Azure_Brand&dclid=CKjVuKOP7uYCFVapaAoddSkKcA)
+   - *Permissions needed*: ability to create and deploy to an azure [resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview), a [service principal](https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals), and grant the [collaborator role](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview) to the service principal over the resource group.
+3. [Azure DevOps Project](https://azure.microsoft.com/en-us/services/devops/)
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
    - *Permissions needed*: ability to create [service connections](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml), [pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops&tabs=yaml) and [variable groups](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml). Ability to install Azure DevOps extensions (unless the required [Synapse extension](https://marketplace.visualstudio.com/items?itemName=AzureSynapseWorkspace.synapsecicd-deploy) is already installed).
 
 #### Software pre-requisites if you don't use dev container<!-- omit in toc -->
@@ -307,8 +324,11 @@ Please check the details [here](docs/observability.md).
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Azure-Samples-main
 =======
 >>>>>>> Azure-Samples-main
    > **IMPORTANT NOTE**: Only the **DEV** Synapse workspace should be setup with Git integration. Do **not** setup git integration in the STG and PROD Data Factories.
@@ -337,10 +357,13 @@ Please check the details [here](docs/observability.md).
 4. **Run setup notebook in Synapse workspace per environment**
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Azure-Samples-main
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Azure-Samples-main
    - Grant yourself *Storage Data Blob Contributor* to the Synapse main storage (`mdwdopsst2<ENV><DEPLOYMENT_ID>`).
    - Navigate into DEV Synapse workspace notebooks tab and select the *00_setup* notebook.
    - Run this notebook, attaching to the created Spark Pool.
@@ -373,8 +396,21 @@ Please check the details [here](docs/observability.md).
    - Click on Refresh data.
       > Your Dashboard will initially be empty. You will need your data pipeline to run a few times for the data in your SQL Dedicated Pool to populate.
 =======
+<<<<<<< HEAD
 >>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 =======
+>>>>>>> Azure-Samples-main
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+=======
+>>>>>>> 9276ac8 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> 8eb5c18 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 >>>>>>> Azure-Samples-main
     > **IMPORTANT NOTE**: Only the **DEV** Synapse workspace should be setup with Git integration. Do **not** setup git integration in the STG and PROD Data Factories.
 
@@ -393,12 +429,27 @@ Please check the details [here](docs/observability.md).
    > **Ensure you Import Existing Synapse resources to repository**. The deployment script deployed Synapse Workspace objects with Linked Service configurations in line with the newly deployed environments. Importing existing Synapse Workspace resources definitions to the repository overrides any default Linked Services values so they are correctly in sync with your DEV environment.
 4. **Run setup notebook in Synapse workspace per environment**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 <<<<<<< HEAD
 >>>>>>> Azure-Samples-main
 =======
 >>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> Azure-Samples-main
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> 9276ac8 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+=======
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> 8eb5c18 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 >>>>>>> Azure-Samples-main
    1. Grant yourself *Storage Data Blob Contributor* to the Synapse main storage (`mdwdopsst2<ENV><DEPLOYMENT_ID>`).
    2. Navigate into DEV Synapse workspace notebooks tab and select the *00_setup* notebook.
@@ -421,6 +472,13 @@ Please check the details [here](docs/observability.md).
 
 6. **Optional. Visualize data in PowerBI**
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8eb5c18 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> Azure-Samples-main
 =======
 <<<<<<< HEAD
    > This requires [PowerBI Desktop App](https://powerbi.microsoft.com/en-us/desktop/) installed.
@@ -435,9 +493,18 @@ Please check the details [here](docs/observability.md).
       > Your Dashboard will initially be empty. You will need your data pipeline to run a few times for the data in your SQL Dedicated Pool to populate.
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Azure-Samples-main
 =======
 >>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> Azure-Samples-main
+=======
+>>>>>>> 30f128c (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+<<<<<<< HEAD
+=======
+>>>>>>> 9276ac8 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+=======
+>>>>>>> 8eb5c18 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 >>>>>>> Azure-Samples-main
     > This requires [PowerBI Desktop App](https://powerbi.microsoft.com/en-us/desktop/) installed.
     1. Open the provided PowerBi pbix (PowerBI_ParkingSensors.pbix) under `reports` folder.
@@ -451,6 +518,10 @@ Please check the details [here](docs/observability.md).
         > Your Dashboard will initially be empty. You will need your data pipeline to run a few times for the data in your SQL Dedicated Pool to populate.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
+>>>>>>> Azure-Samples-main
 =======
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 >>>>>>> Azure-Samples-main

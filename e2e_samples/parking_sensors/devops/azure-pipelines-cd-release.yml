@@ -14,6 +14,7 @@ resources:
     type: github
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,9 +24,33 @@ resources:
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f2edc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+>>>>>>> Azure-Samples-main
+=======
 >>>>>>> 89f0c1b (Single tech/databricks ops (#371))
 =======
 >>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f975b3e (Single tech/databricks ops (#371))
+=======
+>>>>>>> 268e970 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+=======
+=======
+>>>>>>> 89f0c1b (Single tech/databricks ops (#371))
+>>>>>>> 038a4ed (Single tech/databricks ops (#371))
+=======
+>>>>>>> f2edc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 >>>>>>> Azure-Samples-main
     endpoint: mdwdops-github
     name: devlace/mdw-dataops-clone
@@ -34,23 +59,62 @@ resources:
     name: devlace/mdw-dataops-parkingsensors-02
 >>>>>>> 38da4d8 (Single tech/databricks ops (#371))
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
+=======
+>>>>>>> 268e970 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+=======
+>>>>>>> 038a4ed (Single tech/databricks ops (#371))
+=======
+=======
+>>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+>>>>>>> f2edc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 >>>>>>> Azure-Samples-main
 =======
     endpoint: mdwdops-github
     name: devlace/mdw-dataops-clone
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f2edc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+>>>>>>> Azure-Samples-main
 =======
 >>>>>>> 89f0c1b (Single tech/databricks ops (#371))
 =======
 >>>>>>> 8254e67 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f975b3e (Single tech/databricks ops (#371))
+=======
+>>>>>>> 268e970 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+=======
+=======
+>>>>>>> 89f0c1b (Single tech/databricks ops (#371))
+>>>>>>> 038a4ed (Single tech/databricks ops (#371))
+=======
+>>>>>>> f2edc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 >>>>>>> Azure-Samples-main
     ref: adf_publish
 

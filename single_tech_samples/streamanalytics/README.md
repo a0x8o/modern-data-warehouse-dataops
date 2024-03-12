@@ -1,16 +1,19 @@
-# Azure Stream Analytics
+# Azure Synapse Analytics
 
-![introductory diagram](./docs/images/ASA-job.PNG)
+[Azure Stream Analytics](https://learn.microsoft.com/en-au/azure/stream-analytics/) is a fully managed, real-time analytics service designed to help you analyze and process fast moving streams of data that can be used to get insights, build reports or trigger alerts and actions.
 
-[Azure Stream Analytics](https://azure.microsoft.com/en-us/products/stream-analytics/) is a serverless real-time analytics service. The goal of this sample is to demonstrate how to develop a streaming pipeline, with IaC and testability in mind.
+## Samples
 
+<<<<<<< HEAD
+- [CI/CD - Azure Stream Analytics](./streamanalytics_ci_cd/README.md) - This sample demonstrates how to develop a streaming pipeline, with IaC and testability in mind.
+=======
 ## Prerequisites
 
 ## Setup
 
 1. __Azure Cli__ Will be necessary for various tasks. Please follow the instructions found [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli).
 
-1. __Bicep__  This project uses `Bicep` templates to setup `Azure` infrastructure. Please follow the steps under [Install Bicep Tools](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/install) to install the `Azure Cli` extension.
+1. __Bicep__  This project uses `Bicep` templates to setup `Azure` infrastructure. Please follow the steps under [Install and manage via Azure CLI (easiest)](https://github.com/Azure/bicep/blob/main/docs/installing.md#install-and-manage-via-azure-cli-easiest) to install the `Azure Cli` extension.
 
    For an introduction to `Bicep`, you can find more information in the `Bicep` repo under [Get started with Bicep](https://github.com/Azure/bicep/#get-started-with-bicep).
 
@@ -118,7 +121,7 @@ az deployment group create -f main.bicep -g rg-${DEVELOPER} --parameters query='
 az iot hub device-identity create --hub-name iot-${DEVELOPER}-${ENVIRONMENT} --device-id iot-${DEVELOPER}-${ENVIRONMENT} --edge-enabled
 
 export DEVICE_CONNECTION_STRING=$(az iot hub device-identity connection-string show --hub-name iot-${DEVELOPER}-${ENVIRONMENT} --device-id iot-${DEVELOPER}-${ENVIRONMENT} --output tsv)
-export AZURE_STORAGE_CONNECTION_STRING=$(az storage account show-connection-string -g rg-${DEVELOPER} -n ${STORAGE_ACCOUNT} --query connectionString -o tsv)
+export AZURE_STORAGE_CONNECTION_STRING=$(az storage account show-connection-string -n ${STORAGE_ACCOUNT} --query connectionString -o tsv)
 
 # Cleanup
 az group delete -n rg-${DEVELOPER}
@@ -166,11 +169,4 @@ This sample combines [Azure IoT device SDK](https://www.npmjs.com/package/azure-
 ![test result output screen capture](docs/images/e2e-test.PNG)
 
 Within the test file [e2e/e2e.ts](e2e/e2e.ts) there is the `EXPECTED_E2E_LATENCY_MS` defined to be 1s. So this would also need to be adjusted for a real implementation.
-
-#### CI/CD
-
-A sample CI/CD Pipeline YAML file is present in this repo under "samplecicdpipeline.yml". This pipeline runs the tests present under the tests folder,
-sets up the IoTHub, and deploys the ASA job using the contents of the streamingjobs.bicep file. In order to add a new ASA job, please do the following:
-
-1. Include a new bicep file for the additional ASA job, and add it to the main.bicep file.
-2. Add the query into the inlineScript under the parameters of the yaml file where the deployment of main.bicep happens.
+>>>>>>> 5b0edd9 (Fix broken link to Bicep tutorial (#453))

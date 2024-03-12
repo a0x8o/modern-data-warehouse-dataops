@@ -1,7 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 89f0c1b (Single tech/databricks ops (#371))
+>>>>>>> Azure-Samples-main
+=======
 <<<<<<< HEAD
 =======
 >>>>>>> 89f0c1b (Single tech/databricks ops (#371))
@@ -12,10 +18,13 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Azure Databricks CI/CD template <!-- omit in toc -->
 
 ## Contents <!-- omit in toc -->
 =======
+=======
+>>>>>>> Azure-Samples-main
 =======
 >>>>>>> Azure-Samples-main
 # Azure Databricks CI/CD template
@@ -23,9 +32,12 @@
 ## Contents
 >>>>>>> 38da4d8 (Single tech/databricks ops (#371))
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Azure-Samples-main
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Azure-Samples-main
 =======
 # Azure Databricks CI/CD template <!-- omit in toc -->
 
@@ -33,6 +45,9 @@
 >>>>>>> e9848f5 (fix: lint issues in Databricks CICD sample (#450))
 =======
 >>>>>>> 89f0c1b (Single tech/databricks ops (#371))
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
 >>>>>>> Azure-Samples-main
 
 - [1. Solution Overview](#1-solution-overview)
@@ -43,16 +58,22 @@
   - [2.1. Prerequisites](#21-prerequisites)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> Azure-Samples-main
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Azure-Samples-main
 <<<<<<< HEAD
 =======
 >>>>>>> e9848f5 (fix: lint issues in Databricks CICD sample (#450))
 =======
 >>>>>>> 89f0c1b (Single tech/databricks ops (#371))
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
 >>>>>>> Azure-Samples-main
   - [2.2. Infrastructure as Code (IaC)](#22-infrastructure-as-code-iac)
   - [2.3. Project Structure](#23-project-structure)
@@ -74,7 +95,10 @@
     - [2.5.5 Deployment](#255-deployment)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> Azure-Samples-main
 =======
 >>>>>>> Azure-Samples-main
 =======
@@ -95,9 +119,12 @@
     - [2.5.5 Deployment](#255-Deployment)
 >>>>>>> 38da4d8 (Single tech/databricks ops (#371))
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Azure-Samples-main
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Azure-Samples-main
 =======
     - [2.4.2 DevOps pipeline setup](#242-devops-pipeline-setup)
     - [2.4.3 Import into DEV databricks workspace](#243-import-into-dev-databricks-workspace)
@@ -115,6 +142,9 @@
 >>>>>>> e9848f5 (fix: lint issues in Databricks CICD sample (#450))
 =======
 >>>>>>> 89f0c1b (Single tech/databricks ops (#371))
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
 >>>>>>> Azure-Samples-main
 
 ## 1. Solution Overview
@@ -153,8 +183,8 @@ The below diagram illustrates the deployment process flow followed in this templ
 
 The following technologies are used to build this template:
 
-- [Azure DevOps](https://azure.microsoft.com/en-us/products/devops/)
-- [Azure Databricks](https://azure.microsoft.com/en-us/free/databricks/)
+- [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/)
+- [Azure Databricks](https://azure.microsoft.com/en-au/free/databricks/)
 - [Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview)
 - [nutter](https://github.com/microsoft/nutter)
 - [databricks cli](https://docs.microsoft.com/en-us/azure/databricks/dev-tools/cli/)
@@ -171,7 +201,7 @@ The following are the prerequisites for deploying this template :
 1. [Github account](https://github.com/)
 2. [Azure DevOps account](https://dev.azure.com)
 3. [Azure account](https://portal.azure.com)
-4. [Azure Databricks Workspace](https://azure.microsoft.com/en-us/products/databricks/)
+4. [Azure Databricks Workspace](https://azure.microsoft.com/en-us/services/databricks/)
 
 ### 2.2. Infrastructure as Code (IaC)
 
@@ -487,6 +517,7 @@ In this repo, there are several yaml files, which are the pipelines to support t
 - Clone the repo into your local folder and open the folder with VSCode
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ##### 2.5.3.1 Run tests using devcontainer
 
@@ -505,25 +536,53 @@ In this repo, there are several yaml files, which are the pipelines to support t
 
 ##### 2.5.3.1 Run tests using devcontainer
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f975b3e (Single tech/databricks ops (#371))
+=======
+>>>>>>> 6cd36ef (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+=======
+=======
+>>>>>>> 88e91cb (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+=======
+>>>>>>> 89f0c1b (Single tech/databricks ops (#371))
+>>>>>>> 038a4ed (Single tech/databricks ops (#371))
+
+##### 2.5.3.1 Run tests using devcontainer
+
+>>>>>>> Azure-Samples-main
 <<<<<<< HEAD
 =======
 
 ##### 2.5.3.1 Run tests using devcontainer
 
 >>>>>>> ae756c9 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
 >>>>>>> Azure-Samples-main
 =======
 
 ##### 2.5.3.1 Run tests using devcontainer
 >>>>>>> bf774e5 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Azure-Samples-main
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> Azure-Samples-main
+=======
 >>>>>>> e9848f5 (fix: lint issues in Databricks CICD sample (#450))
 =======
 >>>>>>> ae756c9 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
 >>>>>>> Azure-Samples-main
 - If needed, install Microsoft VSCode Remote-Containers extension
 - In VSCode, open Command Pallete and type ```Remote-Containers: Open Folder in Container...```
@@ -538,8 +597,14 @@ pytest spark_python_jobs/tests/unit
 ![pytest-output-devcon](images/pytest-output-devcon.png "pytest-output-devcon")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae756c9 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+>>>>>>> Azure-Samples-main
+=======
 <<<<<<< HEAD
 =======
 >>>>>>> ae756c9 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
@@ -550,6 +615,7 @@ pytest spark_python_jobs/tests/unit
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ##### 2.5.3.2 Run tests in your local environment
 
@@ -564,20 +630,57 @@ pytest spark_python_jobs/tests/unit
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> 38da4d8 (Single tech/databricks ops (#371))
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 038a4ed (Single tech/databricks ops (#371))
+=======
+>>>>>>> 88e91cb (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+>>>>>>> Azure-Samples-main
+=======
 ##### 2.5.3.2 Run tests in your local environment
 >>>>>>> bf774e5 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f975b3e (Single tech/databricks ops (#371))
+=======
+=======
+##### 2.5.3.2 Run tests in your local environment
+>>>>>>> bf774e5 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+>>>>>>> 6cd36ef (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+=======
+>>>>>>> Azure-Samples-main
 
 ##### 2.5.3.2 Run tests in your local environment
 
 >>>>>>> e9848f5 (fix: lint issues in Databricks CICD sample (#450))
+<<<<<<< HEAD
 =======
 >>>>>>> 89f0c1b (Single tech/databricks ops (#371))
+=======
+<<<<<<< HEAD
+>>>>>>> 73c3afc (fix: lint issues in Databricks CICD sample (#450))
+=======
+=======
+>>>>>>> 89f0c1b (Single tech/databricks ops (#371))
+<<<<<<< HEAD
+>>>>>>> 038a4ed (Single tech/databricks ops (#371))
+=======
+>>>>>>> Azure-Samples-main
 =======
 =======
 ##### 2.5.3.2 Run tests in your local environment
 >>>>>>> bf774e5 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
 >>>>>>> ae756c9 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
+>>>>>>> 88e91cb (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
 >>>>>>> Azure-Samples-main
 - Setup local Spark with this [document](https://sigdelta.com/blog/how-to-install-pyspark-locally/)
 - Open a cmd terminal window and run the script below to setup the project development.
@@ -598,6 +701,7 @@ pytest spark_python_jobs/tests/unit
   ![pytest-output](images/pytest-output.png "pytest-output")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
 <<<<<<< HEAD
@@ -620,8 +724,34 @@ pytest spark_python_jobs/tests/unit
 >>>>>>> ae756c9 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
   
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f975b3e (Single tech/databricks ops (#371))
+=======
+>>>>>>> 6cd36ef (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+=======
+>>>>>>> 73c3afc (fix: lint issues in Databricks CICD sample (#450))
+=======
+=======
+>>>>>>> 89f0c1b (Single tech/databricks ops (#371))
+>>>>>>> 038a4ed (Single tech/databricks ops (#371))
+=======
+=======
+>>>>>>> 89f0c1b (Single tech/databricks ops (#371))
+=======
+>>>>>>> ae756c9 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+>>>>>>> 88e91cb (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+  
+=======
+>>>>>>> Azure-Samples-main
 
 >>>>>>> 38da4d8 (Single tech/databricks ops (#371))
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -632,9 +762,41 @@ pytest spark_python_jobs/tests/unit
 =======
 >>>>>>> 89f0c1b (Single tech/databricks ops (#371))
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 038a4ed (Single tech/databricks ops (#371))
+=======
+>>>>>>> 88e91cb (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+=======
+>>>>>>> bf774e5 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+=======
+<<<<<<< HEAD
+>>>>>>> f975b3e (Single tech/databricks ops (#371))
+=======
+=======
+>>>>>>> bf774e5 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+>>>>>>> 6cd36ef (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+=======
+  
+>>>>>>> e9848f5 (fix: lint issues in Databricks CICD sample (#450))
+<<<<<<< HEAD
+>>>>>>> 73c3afc (fix: lint issues in Databricks CICD sample (#450))
+=======
+=======
+>>>>>>> 89f0c1b (Single tech/databricks ops (#371))
+<<<<<<< HEAD
+>>>>>>> 038a4ed (Single tech/databricks ops (#371))
+=======
+>>>>>>> Azure-Samples-main
+=======
 =======
 >>>>>>> bf774e5 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
 >>>>>>> ae756c9 (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
+>>>>>>> 88e91cb (Merge pull request #441 from Azure-Samples/garyw/single-tech-dbx-devcon)
 >>>>>>> Azure-Samples-main
 #### 2.5.4 Run test with pipelines
 

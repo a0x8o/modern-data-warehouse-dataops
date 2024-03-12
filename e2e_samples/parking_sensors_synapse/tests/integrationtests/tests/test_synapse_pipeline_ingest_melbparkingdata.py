@@ -67,9 +67,12 @@ def test_synapse_pipeline_succeeded(azure_credential, synapse_endpoint, sql_conn
     assert row is not None
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     assert int(row.COUNT) >= 1
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Azure-Samples-main
 =======
 >>>>>>> Azure-Samples-main
     # In some rare scenarios, it might so happen that the dataset gets aggregated but still manages to produce one row.
@@ -79,6 +82,9 @@ def test_synapse_pipeline_succeeded(azure_credential, synapse_endpoint, sql_conn
     assert int(row.COUNT) >= 1
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
 >>>>>>> Azure-Samples-main
 =======
 >>>>>>> Azure-Samples-main

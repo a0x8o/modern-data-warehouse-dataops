@@ -81,9 +81,12 @@ wait_service_principal_creation () {
         echo "waiting for service principal to finish creating..."
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         sleep 10s
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Azure-Samples-main
 =======
 >>>>>>> Azure-Samples-main
         sleep 10
@@ -91,6 +94,9 @@ wait_service_principal_creation () {
         sleep 10s
 >>>>>>> f06c799 (fix(parking_sensors_synapse): clarity in README in parking sensor synapse sample, add requirement for Synapse extension, comment out debugging in script by default, add general troubleshooting section (#466))
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Azure-Samples-main
+=======
 >>>>>>> Azure-Samples-main
 =======
 >>>>>>> Azure-Samples-main

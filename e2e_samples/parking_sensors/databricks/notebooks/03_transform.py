@@ -12,6 +12,10 @@ from applicationinsights import TelemetryClient
 tc = TelemetryClient(dbutils.secrets.get(scope = "storage_scope", key = "applicationInsightsKey"))
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
+>>>>>>> Azure-Samples-main
 =======
 >>>>>>> e15dc70 (E2E Parking Sensor: Convert ARM templates to Bicep, Improve Deployment script, and bugfix #370 (#378))
 >>>>>>> Azure-Samples-main
